@@ -18,7 +18,7 @@ def mostra = { def texto ->
 }
 
 /**
- * Faça uma função que compara dois Intgers e devolva qual é maior.
+ * Faça uma função que compare dois Integers e devolva qual é maior.
  * Depois use essa função para achar o maior número da lista abaixo
  */
 

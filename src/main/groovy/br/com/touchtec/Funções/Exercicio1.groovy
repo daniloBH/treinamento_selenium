@@ -23,5 +23,3 @@ Closure<Integer> pedeInteiro = {
  * Obs.: Utilize o mostra() e pedeInteiro() para facilitar a sua vida
  */
 
-
- fdsf
