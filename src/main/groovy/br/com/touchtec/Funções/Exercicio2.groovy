@@ -1,0 +1,26 @@
+package br.com.touchtec.Funções
+
+import javax.swing.JFrame
+import javax.swing.JOptionPane
+
+Closure<String> pedeString = {
+    JFrame frame = new JFrame()
+    String answer = JOptionPane.showInputDialog(frame, "Digite um texto")
+    frame.dispose()
+    return answer
+}
+
+def mostra = { def texto ->
+    JFrame frame = new JFrame()
+    String answer = JOptionPane.showMessageDialog(frame, texto.toString())
+    frame.dispose()
+    return answer
+}
+
+/**
+ * Faça uma função que compara dois Intgers e devolva qual é maior.
+ * Depois use essa função para achar o maior número da lista abaixo
+ */
+
+List<Integer> listaNumeros = [15, 2, 6, 16, 12, 8, 30, 29, -1, 32, 1, 25, 11, 2];
+

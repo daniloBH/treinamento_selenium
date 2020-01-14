@@ -6,7 +6,7 @@ import javax.swing.JOptionPane
 // IGNOREM ESTE TRECHO
 Closure<String> pedeString = {
     JFrame frame = new JFrame()
-    String answer = JOptionPane.showInputDialog(frame, "Digite um inteiro")
+    String answer = JOptionPane.showInputDialog(frame, "Digite um texto")
     frame.dispose()
     return answer
 }
