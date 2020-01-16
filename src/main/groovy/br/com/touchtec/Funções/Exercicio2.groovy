@@ -3,13 +3,6 @@ package br.com.touchtec.Funções
 import javax.swing.JFrame
 import javax.swing.JOptionPane
 
-Closure<String> pedeString = {
-    JFrame frame = new JFrame()
-    String answer = JOptionPane.showInputDialog(frame, "Digite um texto")
-    frame.dispose()
-    return answer
-}
-
 def mostra = { def texto ->
     JFrame frame = new JFrame()
     String answer = JOptionPane.showMessageDialog(frame, texto.toString())

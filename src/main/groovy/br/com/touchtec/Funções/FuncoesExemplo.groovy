@@ -10,7 +10,8 @@ def mostra = { def texto ->
     return answer
 }
 
-/** Funções (ou Métodos)
+/** Funções
+ *  (Também chamadas de Métodos no Java)
  *  O que é? Um pedaço de código/lógica que tem um nome que você chama
  *  Como cria uma? Você declara a função definindo o nome, o que ela retorna e os parâmetros dela
  */
@@ -54,3 +55,8 @@ Integer determinaMaior(Integer a, Integer b) {
 Integer a = 8
 Integer b = 6
 determinaMaior(a, b)
+
+/**
+ * Funções servem para vc encapsular um pedaço de código com um nome, evitando que vc tenha que reescrever a lógica
+ * várias vezes
+ */
