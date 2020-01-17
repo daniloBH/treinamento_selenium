@@ -33,7 +33,18 @@ def mostraLista = { List<String> lista ->
  * c) E depois mostre a soma de tudo que o usuario inseriu
  */
 
-def lista = []
+List<Integer> numeros = [];
+while (true) {
+    Integer num = pedeInteiro();
+    if(num < 0){
+        break
+    }
+    numeros.add(num);
+}
 
-lista.add()
-
+mostraLista(numeros);
+Integer soma = 0;
+for(Integer numero : numeros){
+    soma += numero;
+}
+mostra(soma);
