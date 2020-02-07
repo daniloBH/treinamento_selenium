@@ -23,3 +23,10 @@ Closure<Integer> pedeInteiro = {
  * Obs.: Utilize o mostra() e pedeInteiro() para facilitar a sua vida
  */
 
+int valor = pedeInteiro();
+int valor1 = pedeInteiro();
+int valor2 = pedeInteiro();
+Integer media (Integer nota1 , Integer nota2, Integer nota3){
+    return ((nota1 + nota2 + nota3) / 3);
+}
+    mostra(media(valor,valor1,valor2));

@@ -1,5 +1,14 @@
 package br.com.touchtec.Funções
 
+import javax.swing.JFrame
+import javax.swing.JOptionPane
+
+def mostra = { def texto ->
+    JFrame frame = new JFrame()
+    String answer = JOptionPane.showMessageDialog(frame, texto.toString())
+    frame.dispose()
+    return answer
+}
 
 /**
  * !DESAFIO!
@@ -9,4 +18,13 @@ package br.com.touchtec.Funções
  * dividem ele, enquanto 6 não é primo, pois 1, 2, 3 e 6 dividem ele.
  *
  * Com essa função pronta, faça um loop para mostrar todos os primos entre 1 e 500
- */
+// */
+
+boolean numero (Integer a){
+        if (a % 2 != 0){
+            return true
+        }
+}
+for (Integer num = 2; num <= 20; num++){ 
+    numero(num);
+}

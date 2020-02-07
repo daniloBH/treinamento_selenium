@@ -6,14 +6,14 @@ import javax.swing.JOptionPane
 // IGNOREM ESTE TRECHO
 Closure<String> pedeString = {
     JFrame frame = new JFrame()
-    String answer = JOptionPane.showInputDialog(frame, "Digite um texto")
+    String answer = JOptionPane.showInputDialog(frame, "Digite Nome")
     frame.dispose()
     return answer
 }
 
 Closure<Integer> pedeInteiro = {
     JFrame frame = new JFrame()
-    String answer = JOptionPane.showInputDialog(frame, "Digite um inteiro")
+    String answer = JOptionPane.showInputDialog(frame, "Digite Idade")
     frame.dispose()
     return Integer.parseInt(answer)
 }
@@ -43,6 +43,26 @@ def mostraMapa = { def map ->
  * Para isso, guarde as informações em um mapa
  */
 
-def mapa = [:]
+def mapas = []
+for (int i=1 ; i<=3; i++) {
+    def mapa = [:]
+    mapa['nome'] = pedeString();
+    mapa['idade'] = pedeInteiro();
+    mapas.add(mapa);
+}
+for(def mapa : mapas){
+    if(mapa ['idade'] >= 18){
+        mostraMapa(mapa);
+    }
+}
+for (def mapa : mapas){
+    if(mapa ['idade'] < 18){
+        int falta = 18 - mapa['idade'];
+        mostra(mapa['nome'] + " falta " + falta + " anos para 18 anos.");
+    }
+}
+
+//String nome = pedeString();
+//Integer idade = pedeInteiro();
 
 
