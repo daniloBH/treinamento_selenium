@@ -1,6 +1,5 @@
 package br.com.touchtec.Classes_e_Objetos
 
-
 /**
  * Construindo a sua casa
  * Crie uma classe chamada CasaDosSonhos que tenha os seguintes atributos:

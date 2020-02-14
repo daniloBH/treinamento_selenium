@@ -14,6 +14,9 @@ def mostra = { def texto ->
  * Classes e Objetos
  * O começo de Programação Orientada a Objetos
  *
+ * O que é Orientação a Objetos? É um tipo de linguagem focada em representar coisas reais
+ * através de objetos que usam estruturas de dados e operações que manipulam esses dados.
+ *
  * O que é uma classe? Um tipo de Objeto que voce pode criar, como um template
  * Integer, String, List, Map são todas classes que já foram criadas no Java para ajudar a gente
  *
@@ -28,7 +31,10 @@ class Teste {
     List<String> anotacoes;
 
     //Construtor da classe, função responsável por criar o objeto
-    Teste() {}
+    Teste(String nome, String autor) {
+        this.nome = nome;
+        this.autor = autor;
+    }
 
     //Daqui para baixo temos os métodos da classe
 
@@ -72,17 +78,22 @@ class Teste {
 
 // teste1 é um Objeto da classe Teste
 //Criamos um objeto de uma classe chamando o construtor
-Teste teste1 = new Teste();
+Teste teste1 = new Teste("teste", "dan");
 
 //Métodos/Funções são aquilo que usamos para interagir com objetos de uma Classe
 teste1.setNome("Teste Exploratório");
 teste1.setAutor("Issao");
-def anotacoes = ["Dia 1: comecei o teste agora, por enquanto nada de especial",
+
+List<String> anotacoes = ["Dia 1: comecei o teste agora, por enquanto nada de especial",
 "Dia 2: já achei uns bug meio estranho, mas a equipe já sabia deles",
 "Dia 3: mais bugs, mas agora ninguém pode me ajudar, ninguém conhecia nada dessa parte do sistema"];
 teste1.setAnotacoes(anotacoes);
 
-def nomeDoTeste = teste1.getNome();
+String nomeDoTeste = teste1.getNome();
 mostra(nomeDoTeste);
+String nomeDoAutor = teste1.getAutor();
+mostra(nomeDoAutor);
+String anotacao1 = teste1.getAnotacoes()[0];
+mostra(anotacao1);
 
 
