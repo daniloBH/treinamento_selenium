@@ -32,8 +32,8 @@ class Forma {
         return largura + numero
     }
 
-    Integer soma(String numero) {
-        return numero.toInteger() + largura
+    Integer soma(String texto) {
+        return texto.toInteger() + largura
     }
 
     Integer soma(Integer numero1, Integer numero2) {
