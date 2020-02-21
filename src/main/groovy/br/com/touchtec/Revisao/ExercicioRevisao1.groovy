@@ -35,5 +35,19 @@ def mostraLista = { List<String> lista ->
 
 def lista = []
 
-lista.add()
+Integer numero
+Integer soma = 0
 
+for (;;){
+    numero = pedeInteiro()
+    if (numero <= -1){
+        break
+    }
+    lista.add (numero)
+}
+mostraLista (lista)
+
+for (Integer i : lista ){
+    soma = soma + i
+}
+mostra (soma)

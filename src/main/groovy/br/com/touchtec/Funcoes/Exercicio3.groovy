@@ -1,5 +1,15 @@
 package br.com.touchtec.Funcoes
 
+import javax.swing.JFrame
+import javax.swing.JOptionPane
+
+
+def mostra = { def texto ->
+    JFrame frame = new JFrame()
+    String answer = JOptionPane.showMessageDialog(frame, texto.toString())
+    frame.dispose()
+    return answer
+}
 
 /**
  * !DESAFIO!
@@ -10,3 +20,18 @@ package br.com.touchtec.Funcoes
  *
  * Com essa função pronta, faça um loop para mostrar todos os primos entre 1 e 500
  */
+
+boolean numeroPrimo (Integer numero){
+    for (Integer i = 2; i < numero; i++){
+        if (numero % i == 0)
+            return false
+    }
+    return true
+}
+
+Integer i
+for (i = 1; i <= 500; i ++){
+    if (numeroPrimo(i)){
+        mostra i
+    }
+}

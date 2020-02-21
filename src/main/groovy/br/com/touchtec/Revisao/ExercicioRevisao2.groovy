@@ -45,4 +45,22 @@ def mostraMapa = { def map ->
 
 def mapa = [:]
 
+String nome
+Integer idade
+Integer falta
 
+for (Integer i=0; i<6; i++){
+    nome = pedeString()
+    idade = pedeInteiro()
+    mapa[nome]=idade
+}
+
+mapa.each {elemento ->
+    if (elemento.value > 18){
+        mostra ("Nome: " + elemento.key + ", Idade: " + elemento.value)
+    }
+    if (elemento.value < 18){
+        falta = 18 - elemento.value
+        mostra ("Nome: " + elemento.key + " Idade: " + elemento.value + " Falta: " + falta )
+    }
+}
