@@ -1,5 +1,9 @@
 package br.com.touchtec.Classes_e_Objetos
 
+import org.codehaus.groovy.ast.expr.BooleanExpression
+
+import javax.swing.text.StyledEditorKit
+
 
 /**
  * Nesse exercicio você é um cuidador de um santuário de Monstrinhos e lá você guarda uma ficha de todos eles.
@@ -19,6 +23,7 @@ class Monstrinho {
     String cor;
     Integer peso;
     Integer tamanho;
+
 
 
     Monstrinho(String nome, String cor, Integer peso, Integer tamanho) {
@@ -53,12 +58,37 @@ class Monstrinho {
     }
 
     String getNome() {
-        return nome
+        return this.nome
     }
 
     void setNome(String nome) {
         this.nome = nome
     }
+
+    Boolean maisAltoQue(Monstrinho outroMonstrinho){
+        if(this.tamanho > outroMonstrinho.tamanho){
+            return true
+        }else{
+            return false
+        }
+    }
+
+    Boolean maisPesadoQue(Monstrinho outroMonstrinho) {
+        if (this.peso > outroMonstrinho.peso) {
+            return true
+        } else {
+            return false
+        }
+    }
+
+    Boolean mesmacor(Monstrinho outroMonstrinho){
+        if (this.cor == outroMonstrinho.cor){
+            return true
+        }else{
+            return false
+        }
+    }
+
 
     //Pode colocar os métodos aqui
 
@@ -69,4 +99,11 @@ Monstrinho monstroGordo = new Monstrinho("Gordola", "Azul", 200, 40);
 Monstrinho monstroMagro = new Monstrinho("Vareta", "Laranja", 60, 80);
 Monstrinho monstroPequeno = new Monstrinho("Bola", "Azul", 30, 15);
 Monstrinho monstroCarrancudo = new Monstrinho("Carranca", "Verde", 150, 70);
+
+monstroPequeno.maisAltoQue(monstroCarrancudo)
+
+monstroGordo.maisPesadoQue(monstroMagro)
+
+monstroGordo.mesmacor(monstroPequeno)
+
 
