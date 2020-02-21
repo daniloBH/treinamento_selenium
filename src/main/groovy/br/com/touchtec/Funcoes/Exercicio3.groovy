@@ -1,4 +1,4 @@
-package br.com.touchtec.Funções
+package br.com.touchtec.Funcoes
 
 
 /**
