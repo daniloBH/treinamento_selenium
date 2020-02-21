@@ -19,33 +19,3 @@ def mostra = { def texto ->
  *
  * Com essa função pronta, faça um loop para mostrar todos os primos entre 1 e 500
 // */
-
-<<<<<<< HEAD
-boolean primo (Integer a){
-    if(a <=1){
-        return false;
-    }
-    if (a % 2 == 0){
-        return false
-    }
-    int metade = a/2;
-    for (int i=3; i <= metade; i++){
-        if ((a % i) == 0)
-            return false
-    }
-    return true;
-}
-for (Integer num = 0; num <= 50; num++){
-    if(primo(num)){
-        mostra(num);
-    }
-=======
-boolean numero (Integer a){
-        if (a % 2 != 0){
-            return true
-        }
-}
-for (Integer num = 2; num <= 20; num++){ 
-    numero(num);
->>>>>>> 07/02/2020
-}
