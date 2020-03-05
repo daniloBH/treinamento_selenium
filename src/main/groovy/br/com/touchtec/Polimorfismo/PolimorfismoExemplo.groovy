@@ -63,10 +63,20 @@ class Triangulo extends Forma{
     Integer calculaArea() {
         return (largura * altura)/2
     }
+
+    /**
+     * Nesse método usamos o super.calculaArea.
+     * O super indica que voce quer usar a versão do método declarado na classe pai
+     * Se tirarmos o super ele usará o calculaArea do Triangulo e fará a conta errada
+     */
+    Integer calculaAreaAlternativo() {
+        return super.calculaArea()/2
+    }
 }
 
 Triangulo triangulo = new Triangulo(largura: 4, altura: 2)
 println(triangulo.calculaArea() == 4)
+println(triangulo.calculaAreaAlternativo() == 4)
 
 /**
  * Já no Retangulo, o calculaArea continua funcionando como ele foi declarado na classe Forma
@@ -81,3 +91,4 @@ class Retangulo extends Forma {
 
 Retangulo retangulo = new Retangulo(largura: 8, altura: 6)
 println(retangulo.calculaArea() == 48)
+
