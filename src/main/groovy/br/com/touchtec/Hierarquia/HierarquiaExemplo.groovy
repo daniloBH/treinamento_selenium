@@ -122,14 +122,8 @@ class Caminhao extends Veiculo {
  *      Veiculo veiculo = new Veiculo()
  * Mas isso aqui funciona:
  */
- Carro carro = new Carro()
-
-/**
- * Cuidados com Hierarquias:
- * Pode ficar bem difícil de entender e manter o código quando se tem uma 'árvore' de classes muito comprida
- * Boas práticas dizem que deveriam se ter menos de 7 camadas
- * Portanto esse é um recurso que deve ser utilizado com cuidado!
- */
+Carro peugeotDoIssao = new Carro()
+//peugeotDoIssao.pesoPorEixo()
 
 /**
  * A classe pista usa um veiculo no método dela! Isso significa que vc pode passar um Carro ou um Caminhao pra esse
@@ -153,4 +147,14 @@ class Pista {
     }
 }
 
-/** Criar a classe Moto durante a aula como exemplo*/
+Pista pista = new Pista()
+println pista.determinaVelocidade(peugeotDoIssao)
+
+/** Criar a classe Moto como exemplo*/
+
+/**
+ * Cuidados com Hierarquias:
+ * Pode ficar bem difícil de entender e manter o código quando se tem uma 'árvore' de classes muito comprida
+ * Boas práticas dizem que deveriam se ter menos de 7 camadas
+ * Portanto esse é um recurso que deve ser utilizado com cuidado! (Dicas do Titio Issao)
+ */
