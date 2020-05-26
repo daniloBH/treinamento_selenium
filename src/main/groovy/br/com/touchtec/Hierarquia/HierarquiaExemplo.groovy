@@ -21,10 +21,11 @@ package br.com.touchtec.Hierarquia
  */
 abstract class Veiculo {
 
-    String placa
-    String cor
-    String marca
-    Integer peso
+    private String placa
+    private String cor
+    private String marca
+    private Integer peso
+    private Integer numChassi = 155678
 
     String getPlaca() {
         return placa
@@ -65,6 +66,10 @@ abstract class Veiculo {
     abstract Integer pesoPorEixo()
 
     abstract Integer getVelocidadeMaxima()
+
+    protected Integer getNumChassi() {
+        return this.numChassi
+    }
 }
 
 class Carro extends Veiculo {
@@ -87,6 +92,7 @@ class Carro extends Veiculo {
     Integer getVelocidadeMaxima() {
         return 120
     }
+
 }
 
 class Caminhao extends Veiculo {
@@ -123,6 +129,7 @@ class Caminhao extends Veiculo {
  * Mas isso aqui funciona:
  */
 Carro peugeotDoIssao = new Carro()
+peugeotDoIssao.getNumChassi()
 //peugeotDoIssao.pesoPorEixo()
 
 /**
