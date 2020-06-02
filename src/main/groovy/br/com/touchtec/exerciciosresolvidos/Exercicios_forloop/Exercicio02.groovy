@@ -1,4 +1,4 @@
-package br.com.touchtec.forloop
+package br.com.touchtec.exerciciosresolvidos.Exercicios_forloop
 
 import javax.swing.JFrame
 import javax.swing.JOptionPane
@@ -26,9 +26,12 @@ def mostra = { def texto ->
 }
 
 /**
- * Mostre todos os números pares entre 0 e 10
+ * Mostre todos os números pares entre 0 e 10 mas não mostre o número 6
  */
 
-for (Integer par = 0; par <=10; par = par +2){
+for (Integer par = 0; par <= 10; par = par +2){
+    if (par == 6){
+        continue
+    }
     mostra (par);
 }

@@ -1,4 +1,4 @@
-package br.com.touchtec.forloop
+package br.com.touchtec.exerciciosresolvidos.Exercicios_forloop
 
 import javax.swing.JFrame
 import javax.swing.JOptionPane

@@ -1,4 +1,4 @@
-package br.com.touchtec.Listas.Exercicios
+package br.com.touchtec.exerciciosresolvidos.Exercicio_Listas.Exercicios
 
 import javax.swing.JFrame
 import javax.swing.JOptionPane

@@ -1,4 +1,4 @@
-package br.com.touchtec.forloop
+package br.com.touchtec.exerciciosresolvidos.Exercicios_forloop
 
 import javax.swing.JFrame
 import javax.swing.JOptionPane
@@ -25,6 +25,19 @@ def mostra = { def texto ->
     return answer
 }
 
-for (Integer i = 0; i < 10; i++) {
-    mostra(i);
+/**
+ * Percorra todos os números de 0 a 10.
+ * Se o número for par, multiplique por 5 e mostre o número.
+ * Se o número for impar, multiplique por 10 e mostre o número.
+ *
+ * Dica: Aprenda o operador '%' para descobrir se o número é par ou não. Temos o google para isso!
+ */
+
+for (Integer num = 0; num <= 10; par = num ++){
+    if (num % 2 != 0){
+        mostra(num * 10);
+    }
+    else {
+        mostra(num * 5);
+    }
 }

@@ -1,7 +1,5 @@
 package br.com.touchtec.Polimorfismo
 
-import org.codehaus.groovy.runtime.dgmimpl.arrays.IntegerArrayGetAtMetaMethod
-
 /**
  * Polimorfismo
  *
