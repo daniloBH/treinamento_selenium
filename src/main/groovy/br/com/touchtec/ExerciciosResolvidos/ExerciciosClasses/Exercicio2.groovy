@@ -1,4 +1,4 @@
-package br.com.touchtec.Classes_e_Objetos
+package br.com.touchtec.ExerciciosResolvidos.ExerciciosClasses
 
 
 /**
@@ -12,6 +12,8 @@ package br.com.touchtec.Classes_e_Objetos
  *
  * Depois de criar esses métodos na classe Monstrinho, use eles para comparar os Monstrinhos criados depois da declaração da classe.
  */
+
+println("Exercicio 2")
 
 class Monstrinho {
 
@@ -60,9 +62,32 @@ class Monstrinho {
         this.nome = nome
     }
 
-    //Pode colocar os métodos aqui
+   Boolean maisAltoQue(Monstrinho outroMonstrinho){
+       if (this.getTamanho() > outroMonstrinho.getTamanho()){
+           return true
+       }
+       else {
+           return false
+       }
+   }
 
+    Boolean maisPesadoQue(Monstrinho outroMonstrinho) {
+        if (this.getPeso() > outroMonstrinho.getPeso()){
+            return true
+        }
+        else {
+            return false
+        }
+    }
+    Boolean mesmaCor(Monstrinho outroMonstrinho) {
+        if (this.getCor() > outroMonstrinho.getCor()){
+            return true
+        }
+        else {
+            return false
+        }
 
+    }
 }
 
 /**
@@ -89,3 +114,17 @@ Monstrinho monstroMagro = new Monstrinho("Vareta", "Laranja", 60, 80);
 Monstrinho monstroPequeno = new Monstrinho("Bola", "Azul", 30, 15);
 Monstrinho monstroCarrancudo = new Monstrinho("Carranca", "Verde", 150, 70);
 
+println( monstroGordo.maisAltoQue(monstroPequeno) )
+println( monstroCarrancudo.maisPesadoQue(monstroMagro))
+println( monstroPequeno.mesmaCor(monstroGordo))
+
+List<Monstrinho> monstrinhos = [monstroGordo, monstroMagro, monstroPequeno, monstroCarrancudo]
+
+Monstrinho oMonstroMaisAltoAteAgora = monstrinhos[0]
+for (Monstrinho monstroDaVez : monstrinhos) {
+    if (monstroDaVez.maisAltoQue(oMonstroMaisAltoAteAgora)) {
+        oMonstroMaisAltoAteAgora = monstroDaVez
+    }
+}
+
+println("" + oMonstroMaisAltoAteAgora.nome + " eh o mais alto")

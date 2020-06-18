@@ -13,22 +13,3 @@ package br.com.touchtec.Classes_e_Objetos
  * Depois de criada a classe, crie o objeto da sua Casa dos Sonhos com os valores que
  * sua casa dos sonhos teria
  */
-
-class CasaDoSonhos{
-    Integer comodos
-    Double terreno
-    String endereco
-    Boolean piscina
-    Double jardim
-    String caracteristica
-    CasaDoSonhos(Integer comodos, Double terreno, String endereco, Boolean piscina, Double jardim, String caracteristica){
-        this.comodos = comodos
-        this.terreno = terreno
-        this.endereco = endereco
-        this.piscina = piscina
-        this.jardim = jardim
-        this.caracteristica = caracteristica
-
-    }
-}
-CasaDoSonhos CasaDosSonhos = new CasaDoSonhos(6,600, 'Rua das laranjeiras', true, 200, 'Branca e Linda')
