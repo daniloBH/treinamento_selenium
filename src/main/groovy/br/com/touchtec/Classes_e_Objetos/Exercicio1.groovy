@@ -1,5 +1,7 @@
 package br.com.touchtec.Classes_e_Objetos
 
+import sun.nio.fs.GnomeFileTypeDetector
+
 import javax.swing.JFrame
 import javax.swing.JOptionPane
 
@@ -23,3 +25,65 @@ def mostra = { def texto ->
     frame.dispose()
     return answer
 }
+
+class CasaDosSonhos {
+    Integer comodo;
+    Integer tamanhoTerreno;
+    String local;
+    Boolean piscina;
+    Integer tamanhoJardim;
+    List<String> caracteristica;
+
+    CasaDosSonhos(Integer comodo, Integer tamanhoTerreno, String local,Boolean piscina, Integer tamanhoJardim){
+        this.comodo = comodo;
+        this.tamanhoTerreno = tamanhoTerreno;
+        this.local = local;
+        this.piscina = piscina;
+        this.tamanhoJardim = tamanhoJardim;
+    }
+    Integer getComodo(){
+        return this.comodo
+    }
+    void setComodo(Integer Comodo) {
+        this.comodo = comodo;
+    }
+    Integer getTamanhoTerreno(){
+        return this.tamanhoTerreno
+    }
+    void setTamanhoTerreno(Integer tamanhoTerreno){
+        this.tamanhoTerreno = tamanhoTerreno;
+    }
+    String getLocal(){
+        return this.local
+    }
+    void setLocal(String local){
+        this.tamanhoTerreno = tamanhoTerreno;
+    }
+    Boolean getPiscina(){
+        return this.piscina
+    }
+    void setPiscina(boolean piscina){
+        this.piscina = piscina;
+    }
+    Integer getTamanhoJardim(){
+        return this.tamanhoJardim
+    }
+    void setTamanhoJardim(Integer tamanhoJardim){
+        this.tamanhoJardim = tamanhoJardim;
+    }
+    List<String> getCaracteristica(){
+        return this.caracteristica;
+    }
+
+    void setCaracteristica(List<String> caracteristica){
+        this.caracteristica = caracteristica;
+    }
+}
+CasaDosSonhos nossaCasa = new CasaDosSonhos(5,400,"3Corações",true,150)
+
+List<String> caracteristica = ["Era uma casa, muito engraçada", "Não tinha teto, não tinha nada","Ninguém podia entral nela não", "Porque na casa não tinha chão"]
+nossaCasa.setCaracteristica(caracteristica);
+
+mostra(nossaCasa.getLocal());
+mostra(nossaCasa.getCaracteristica()[0]);
+mostra(nossaCasa.getCaracteristica()[1]);
