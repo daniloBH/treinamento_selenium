@@ -2,6 +2,8 @@ package br.com.touchtec.Classes_e_Objetos
 
 /**
  * Construindo a sua casa
+ *
+
  * Crie uma classe chamada CasaDosSonhos que tenha os seguintes atributos:
  * 1) número de comodos
  * 2) tamanho do terreno em metros quadrados
@@ -13,3 +15,28 @@ package br.com.touchtec.Classes_e_Objetos
  * Depois de criada a classe, crie o objeto da sua Casa dos Sonhos com os valores que
  * sua casa dos sonhos teria
  */
+
+class CasaDosSonhos {
+    int Comodos;
+    int TerrenoMetrosQuadrados;
+    String CasaFica;
+    boolean TemPiscina;
+    int JardimEmMetroQuadrados;
+    String Caracteristicas;
+
+    CasaDosSonhos(int Comodos, int TerrenoMetrosQuadrados, String CasaFica,
+                  boolean TemPiscina,int JardimEmMetroQuadrados,
+                  String Caracteristicas){
+
+        this.Comodos = Comodos;
+        this.TerrenoMetrosQuadrados = TerrenoMetrosQuadrados;
+        this.CasaFica = CasaFica;
+        this.TemPiscina = TemPiscina;
+        this.JardimEmMetroQuadrados = JardimEmMetroQuadrados;
+        this.Caracteristicas = Caracteristicas;
+    }
+
+    CasaDosSonhos(LinkedHashMap<String, Serializable> stringLinkedHashMap) {}
+}
+CasaDosSonhos Casa1 = new CasaDosSonhos(Comodos: 4, TerrenoMetroQuadrados: 2.000,
+CasaFica: "rua x", TemPiscina: true, JardimMetroQuadrados: 500, Caracteristicas: "bonita");

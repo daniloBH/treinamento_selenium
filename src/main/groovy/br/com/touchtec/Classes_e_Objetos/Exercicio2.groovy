@@ -19,13 +19,24 @@ class Monstrinho {
     String cor;
     Integer peso;
     Integer tamanho;
+    Integer agressividade;
 
 
-    Monstrinho(String nome, String cor, Integer peso, Integer tamanho) {
+    Monstrinho(String nome, String cor, Integer peso, Integer tamanho, Integer agressividade) {
         this.setNome(nome);
         this.setCor(cor);
         this.setPeso(peso);
         this.setTamanho(tamanho);
+        this.setAgressividade(agressividade);
+    }
+
+
+    void setAgressividade(Integer agressividade){
+        this.agressividade = agressividade
+    }
+
+    Integer getAgressividade(){
+        return agressividade
     }
 
     Integer getTamanho() {
@@ -62,6 +73,20 @@ class Monstrinho {
 
     //Pode colocar os métodos aqui
 
+     boolean maisAltoQue(Monstrinho outro){
+         return this.getTamanho() > outro.getTamanho()
+    }
+    boolean maisPesadoQue(Monstrinho outro){
+         return this.getPeso() > outro.getPeso()
+    }
+    boolean mesmaCor(Monstrinho outro){
+         return  this.getCor() == outro.getCor()
+    }
+    boolean luta(Monstrinho outro){
+        return ((0.8 * this.getPeso() + 1.1 * this.getTamanho() + 1.2 * this.getAgressividade()) >
+                (0.8 * outro.getPeso() + 1.1 * outro.getTamanho() + 1.2 * outro.getAgressividade()))
+    }
+
 
 }
 
@@ -84,8 +109,25 @@ class Monstrinho {
  * 5) Agora determine qual monstro ganha de todos os outros! Para isso monte algo como um torneio entre eles
  */
 
-Monstrinho monstroGordo = new Monstrinho("Gordola", "Azul", 200, 40);
-Monstrinho monstroMagro = new Monstrinho("Vareta", "Laranja", 60, 80);
-Monstrinho monstroPequeno = new Monstrinho("Bola", "Azul", 30, 15);
-Monstrinho monstroCarrancudo = new Monstrinho("Carranca", "Verde", 150, 70);
+Monstrinho monstroGordo = new Monstrinho("Gordola", "Azul", 200, 40, 10);
+Monstrinho monstroMagro = new Monstrinho("Vareta", "Laranja", 60, 80,  20);
+Monstrinho monstroPequeno = new Monstrinho("Bola", "Azul", 30, 15, 30);
+Monstrinho monstroCarrancudo = new Monstrinho("Carranca", "Verde", 150, 70,  15);
+
+if(monstroGordo.luta(monstroMagro)) {
+    if (monstroGordo.luta(monstroPequeno)) {
+        if (monstroGordo.luta(monstroCarrancudo)) {
+            print("mostro gordo venceu");
+        } else {
+            print("mostro gordo pedeu mostro carrancudo ")
+        }
+    } else {
+        print("mostro gordo pedeu do mostro Pequeno")
+    }
+}else{
+    print("mostro gordo perdeu mostro Magro")
+}
+
+
+
 
