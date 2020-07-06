@@ -19,15 +19,17 @@ class Monstrinho {
     String cor;
     Integer peso;
     Integer tamanho;
-    Integer agrecividade;
+    //Agressividade
+    // R: o cu tá ai, se quiser pode ir tomar nele! ¬¬'
+    Integer agressividade;
 
 
-    Monstrinho(String nome, String cor, Integer peso, Integer tamanho, Integer agrecividade) {
+    Monstrinho(String nome, String cor, Integer peso, Integer tamanho, Integer agressividade) {
         this.setNome(nome);
         this.setCor(cor);
         this.setPeso(peso);
         this.setTamanho(tamanho);
-        this.setAgrecividade(agrecividade)
+        this.setAgressividade(agressividade)
     }
 
     Integer getTamanho() {
@@ -62,34 +64,49 @@ class Monstrinho {
         this.nome = nome
     }
 
-    Integer getAgrecividade(){
-        return agrecividade
+    Integer getAgressividade(){
+        return agressividade
     }
-    void setAgrecividade(Integer agrecividade) {
-        this.agrecividade = agrecividade
+    void setAgressividade(Integer agressividade) {
+        this.agressividade = agressividade
     }
-
-    Boolean maisAltoQue (Monstrinho outroMonstrinho){
-        this.tamanho > outroMonstrinho.tamanho
-        return true
-    }else{
-        return false
-    }
-    Boolean maisPesadoQue (Monstrinho outroMonstrinho){
-        this.peso > outroMonstrinho.peso
-        return true
-    }else{
-        return false
-    }
-    Boolean mesmaCor (Monstrinho outroMonstrinho){
-        this.cor > outroMonstrinho.cor
-        return true
-    }else{
-        return false
-    }
-
 
     //Pode colocar os métodos aqui
+
+    //Esse métodos estão errados. Está faltando o if
+    Boolean maisAltoQue (Monstrinho outroMonstrinho){
+        if(this.tamanho > outroMonstrinho.tamanho){
+            return true
+        }else{
+            return false
+        }
+    }
+    Boolean maisPesadoQue (Monstrinho outroMonstrinho) {
+        if (this.peso > outroMonstrinho.peso) {
+            return true
+        } else {
+            return false
+        }
+    }
+    Boolean mesmaCor (Monstrinho outroMonstrinho) {
+        if (this.cor > outroMonstrinho.cor) {
+            return true
+        } else {
+            return false
+        }
+    }
+    Boolean luta(Monstrinho outroMonstrinho){
+        if (this.forca(this.peso, this.tamanho, this.agressividade)
+                >= this.forca(outroMonstrinho.peso, outroMonstrinho.tamanho, outroMonstrinho.agressividade)){
+            return true;
+        } else {
+            return false;
+        }
+    }
+    Double forca (Integer peso, Integer tamanho, Integer agressividade) {
+        return (0.8 * peso + 1.1 * tamanho + 1.2 * agressividade) / 3
+    }
+
 
 
 }
@@ -113,12 +130,41 @@ class Monstrinho {
  * 5) Agora determine qual monstro ganha de todos os outros! Para isso monte algo como um torneio entre eles
  */
 
-Monstrinho monstroGordo = new Monstrinho("Gordola", "Azul", 200, 40);
-Monstrinho monstroMagro = new Monstrinho("Vareta", "Laranja", 60, 80);
-Monstrinho monstroPequeno = new Monstrinho("Bola", "Azul", 30, 15);
-Monstrinho monstroCarrancudo = new Monstrinho("Carranca", "Verde", 150, 70);
+//Faltou colocar o valor da agressividade nas chamadas do construtor aqui
+Monstrinho monstroGordo = new Monstrinho("Gordola", "Azul", 200, 40,50);
+Monstrinho monstroMagro = new Monstrinho("Vareta", "Laranja", 60, 80,40);
+Monstrinho monstroPequeno = new Monstrinho("Bola", "Azul", 30, 15,20);
+Monstrinho monstroCarrancudo = new Monstrinho("Carranca", "Verde", 150, 70,10);
 
-monstroGordo.setAgracividade(10);
-monstroMagro.setAgrecividade(20);
-monstroPequeno.setAgrecividade(30);
-monstroCarrancudo.setAgrecividade(15);
+//Vc não precisa chamar o set aqui, se colocar na chamada do construtor ele já vai montar os objetos com o valor
+// R: eu coloco o que eu quero... Meu código minhas regras. ¬¬'
+monstroGordo.setAgressividade(10);
+monstroMagro.setAgressividade(20);
+monstroPequeno.setAgressividade(30);
+monstroCarrancudo.setAgressividade(15);
+
+Monstrinho vencedor, vencedor1;
+
+if (monstroGordo.luta(monstroMagro)){
+    println ("Round 1 Vencedor:" + monstroGordo.nome);
+    vencedor = monstroGordo;
+} else {
+    println ("Round 1 Vencedor: " + monstroMagro.nome);
+    vencedor = monstroMagro;
+}
+if (monstroPequeno.luta(monstroCarrancudo)){
+    println("Round 2 Vencedor:" + monstroPequeno.nome)
+    vencedor1 = monstroPequeno;
+} else {
+    println ("Round 2 Vencedor: " + monstroCarrancudo.nome);
+    vencedor1 = monstroCarrancudo;
+}
+if (vencedor.luta(vencedor1)){
+    println ("Round 3 Vencedor: " + vencedor.nome);
+}else{
+    println ("Round 3 Vencedor: " + vencedor1.nome);
+}
+
+//Tem que criar o método luta() descrito no enunciado. Ele vai comparar a força de dois monstrinhos pra dizer qual ganha
+//Depois tem q chamar o método luta pra determinar o monstrinho mais forte de todos!
+
