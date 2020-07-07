@@ -11,7 +11,7 @@ package br.com.touchtec.Classes_e_Objetos
  * 3) mesmaCor(Monstrinho outroMonstrinho) -> devolve verdadeiro se o outro for da mesma cor.
  *
  * Depois de criar esses métodos na classe Monstrinho, use eles para comparar os Monstrinhos criados depois da declaração da classe.
- */
+ ***/
 
 class Monstrinho {
 
@@ -127,6 +127,7 @@ if(monstroGordo.luta(monstroMagro)) {
 }else{
     print("mostro gordo perdeu mostro Magro")
 }
+
 
 
 
