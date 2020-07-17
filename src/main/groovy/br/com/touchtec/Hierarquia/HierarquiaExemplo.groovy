@@ -67,7 +67,7 @@ abstract class Veiculo {
 
     abstract Integer getVelocidadeMaxima()
 
-    protected Integer getNumChassi() {
+    Integer getNumChassi() {
         return this.numChassi
     }
 }
@@ -130,7 +130,8 @@ class Caminhao extends Veiculo {
  */
 Carro peugeotDoIssao = new Carro()
 peugeotDoIssao.getNumChassi()
-//peugeotDoIssao.pesoPorEixo()
+peugeotDoIssao.setCor("Prata")
+println(peugeotDoIssao.getCor())
 
 /**
  * A classe pista usa um veiculo no método dela! Isso significa que vc pode passar um Carro ou um Caminhao pra esse
@@ -158,6 +159,32 @@ Pista pista = new Pista()
 println pista.determinaVelocidade(peugeotDoIssao)
 
 /** Criar a classe Moto como exemplo*/
+
+class Moto extends Veiculo{
+    Boolean temBau;
+
+    Boolean getTemBau() {
+        return this.temBau;
+    }
+
+    void setTemBau(Boolean temBau) {
+        this.temBau = temBau;
+    }
+
+    @Override
+    Integer pesoPorEixo() {
+        return this.peso;
+    }
+
+    @Override
+    Integer getVelocidadeMaxima() {
+        return 120;
+    }
+}
+
+Moto motoca = new Moto();
+motoca.setTemBau(true);
+pista.determinaVelocidade(motoca);
 
 /**
  * Cuidados com Hierarquias:
