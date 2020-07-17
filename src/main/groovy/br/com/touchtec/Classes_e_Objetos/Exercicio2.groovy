@@ -19,8 +19,6 @@ class Monstrinho {
     String cor;
     Integer peso;
     Integer tamanho;
-    //Agressividade
-    // R: o cu tá ai, se quiser pode ir tomar nele! ¬¬'
     Integer agressividade;
 
 
@@ -73,7 +71,6 @@ class Monstrinho {
 
     //Pode colocar os métodos aqui
 
-    //Esse métodos estão errados. Está faltando o if
     Boolean maisAltoQue (Monstrinho outroMonstrinho){
         if(this.tamanho > outroMonstrinho.tamanho){
             return true
@@ -130,14 +127,12 @@ class Monstrinho {
  * 5) Agora determine qual monstro ganha de todos os outros! Para isso monte algo como um torneio entre eles
  */
 
-//Faltou colocar o valor da agressividade nas chamadas do construtor aqui
+
 Monstrinho monstroGordo = new Monstrinho("Gordola", "Azul", 200, 40,50);
 Monstrinho monstroMagro = new Monstrinho("Vareta", "Laranja", 60, 80,40);
 Monstrinho monstroPequeno = new Monstrinho("Bola", "Azul", 30, 15,20);
 Monstrinho monstroCarrancudo = new Monstrinho("Carranca", "Verde", 150, 70,10);
 
-//Vc não precisa chamar o set aqui, se colocar na chamada do construtor ele já vai montar os objetos com o valor
-// R: eu coloco o que eu quero... Meu código minhas regras. ¬¬'
 monstroGordo.setAgressividade(10);
 monstroMagro.setAgressividade(20);
 monstroPequeno.setAgressividade(30);
@@ -161,10 +156,6 @@ if (monstroPequeno.luta(monstroCarrancudo)){
 }
 if (vencedor.luta(vencedor1)){
     println ("Round 3 Vencedor: " + vencedor.nome);
-}else{
-    println ("Round 3 Vencedor: " + vencedor1.nome);
+}else {
+    println("Round 3 Vencedor: " + vencedor1.nome);
 }
-
-//Tem que criar o método luta() descrito no enunciado. Ele vai comparar a força de dois monstrinhos pra dizer qual ganha
-//Depois tem q chamar o método luta pra determinar o monstrinho mais forte de todos!
-

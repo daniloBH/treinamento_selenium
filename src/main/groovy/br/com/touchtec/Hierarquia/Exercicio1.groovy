@@ -68,4 +68,16 @@ class FichaDosBichos {
         frame.dispose()
         return answer
     }
+
+    abstract String getInfoFicha()
+}
+
+class Borboleta extends Bicho{
+
+}
+class Elefante extends Bicho{
+
+}
+class golfinho extends Bicho{
+
 }

@@ -157,7 +157,7 @@ class Pista {
 
 Pista pista = new Pista()
 println pista.determinaVelocidade(peugeotDoIssao)
-
+     /** objeto.metodoOuFunçao(parametro) /
 /** Criar a classe Moto como exemplo*/
 
 class Moto extends Veiculo{
