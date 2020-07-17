@@ -20,8 +20,6 @@ abstract class Bicho {
     String descricao
     String habitat
 
-    abstract String getInfoFicha()
-
     String getNomeComum() {
         return nomeComum
     }
@@ -53,6 +51,8 @@ abstract class Bicho {
     void setHabitat(String habitat) {
         this.habitat = habitat
     }
+
+    abstract String getInfoFicha()
 }
 
 class FichaDosBichos {
