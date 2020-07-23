@@ -19,13 +19,15 @@ class Monstrinho {
     String cor;
     Integer peso;
     Integer tamanho;
+    Integer agressividade;
 
 
-    Monstrinho(String nome, String cor, Integer peso, Integer tamanho) {
+    Monstrinho(String nome, String cor, Integer peso, Integer tamanho, Integer agressividade) {
         this.setNome(nome);
         this.setCor(cor);
         this.setPeso(peso);
         this.setTamanho(tamanho);
+        this.setAgressividade(agressividade)
     }
 
     Integer getTamanho() {
@@ -60,10 +62,45 @@ class Monstrinho {
         this.nome = nome
     }
 
-    //Pode colocar os métodos aqui
+    Integer getAgressividade() {
+        return agressividade
+    }
 
-
+    void setAgressividade(Integer agressividade) {
+        this.agressividade = agressividade
+    }
+//Pode colocar os métodos aqui
+    Boolean maisAltoQue (Monstrinho outroMonstrinho){
+        if (this.getTamanho() > outroMonstrinho.getTamanho()){
+            return true
+        }
+        else{
+            return false
+        }
+    }
+    Boolean maisPesadoQue (Monstrinho outroMonstrinho){
+        if (this.getPeso() > outroMonstrinho.getPeso()){
+            return true
+        }
+        else{
+            return false
+        }
+    }
+    Boolean mesmaCor (Monstrinho outroMonstrinho){
+        if (this.getCor() == outroMonstrinho.getCor()){
+            return true
+        }
+        else{
+            return false
+        }
+    }
+    Boolean luta(Monstrinho outroMonstrinho){
+        Double forca = (0.8 * this.getPeso() + 1.1 * this.getTamanho() + 1.2 * this.getAgressividade())/3
+        Double forcaOutro = (0.8 * outroMonstrinho.getPeso() + 1.1 * outroMonstrinho.getTamanho() + 1.2 * outroMonstrinho.getAgressividade())/3
+        return forca > forcaOutro
+    }
 }
+    
 
 /**
  * Exercicio Extra! Para aqueles que vão além
@@ -84,8 +121,23 @@ class Monstrinho {
  * 5) Agora determine qual monstro ganha de todos os outros! Para isso monte algo como um torneio entre eles
  */
 
-Monstrinho monstroGordo = new Monstrinho("Gordola", "Azul", 200, 40);
-Monstrinho monstroMagro = new Monstrinho("Vareta", "Laranja", 60, 80);
-Monstrinho monstroPequeno = new Monstrinho("Bola", "Azul", 30, 15);
-Monstrinho monstroCarrancudo = new Monstrinho("Carranca", "Verde", 150, 70);
+Monstrinho monstroGordo = new Monstrinho("Gordola", "Azul", 200, 40, 10);
+Monstrinho monstroMagro = new Monstrinho("Vareta", "Laranja", 60, 80, 20);
+Monstrinho monstroPequeno = new Monstrinho("Bola", "Azul", 30, 15, 30);
+Monstrinho monstroCarrancudo = new Monstrinho("Carranca", "Verde", 150, 70, 15);
+
+List <Monstrinho> monstrinhos = [monstroGordo, monstroMagro, monstroPequeno, monstroCarrancudo]
+
+Monstrinho oMonstrinhoMaisAltoAteAgora = monstrinhos[0]
+Monstrinho oMonstrinhoMaisPesado = monstrinhos[0]
+for (Monstrinho oMonstrinhoDaVez : monstrinhos){
+    if (oMonstrinhoDaVez.maisAltoQue(oMonstrinhoMaisAltoAteAgora)){
+        oMonstrinhoMaisAltoAteAgora = oMonstrinhoDaVez
+    }
+    if (oMonstrinhoDaVez.maisPesadoQue(oMonstrinhoMaisPesado)) {
+        oMonstrinhoMaisPesado = oMonstrinhoDaVez
+    }
+}
+println(monstroGordo.mesmaCor(monstroMagro))
+println(monstroGordo.mesmaCor(monstroPequeno))
 
