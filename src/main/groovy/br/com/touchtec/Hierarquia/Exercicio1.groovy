@@ -69,3 +69,57 @@ class FichaDosBichos {
         return answer
     }
 }
+
+/** Classe Bicho macaco */
+
+    class macaco extends Bicho{
+
+        macaco(){
+
+        }
+    @Override
+    String getInfoFicha(){
+        return  "Nome Comum:" + getNomeComum()  + '\n' + "Descrição:" + getDescricao() + '\n'  + "Habitat:" + getHabitat()
+
+    }
+
+    }
+
+/** Classe Bicho Aguia */
+
+class ave extends Bicho{
+    ave(){
+
+    }
+    @Override
+    String getInfoFicha(){
+        return "Nome Comum:" + getNomeComum() + '\n'  + "Nome Cientifico:" + getNomeCientifico() + '\n'  + "Descrição:" + getDescricao()
+
+    }
+
+}
+
+/** Classe Bicho Coruja */
+
+class camundongo extends Bicho{
+
+    camundongo(){
+
+    }
+    @Override
+    String getInfoFicha(){
+        return "Nome Comum:" + getNomeComum()  + '\n' + "Habitat:" + getHabitat() + '\n'  + "Nome Cientifico:" + getNomeCientifico()
+
+    }
+
+}
+
+Bicho gorila = new macaco(nomeComum: "Gorila", nomeCientifico: "godizila", descricao: "Forte e bravo" ,  habitat: "mato")
+Bicho aguia = new ave(nomeComum: "Aguia", nomeCientifico: "Bico rapido", descricao: "Voa alto", habitat: "O ceu" )
+Bicho rato = new camundongo(nomeComum: "Rato", nomeCientifico: "rato louco", descricao:"rapido", habitat: "Esgoto")
+
+FichaDosBichos ficha = new FichaDosBichos()
+
+ficha.mostraInformacao(ficha.infoBicho(gorila))
+ficha.mostraInformacao(ficha.infoBicho(aguia))
+ficha.mostraInformacao(ficha.infoBicho(rato))
