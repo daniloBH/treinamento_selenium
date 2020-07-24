@@ -68,16 +68,78 @@ class FichaDosBichos {
         frame.dispose()
         return answer
     }
-
-    abstract String getInfoFicha()
 }
 
-class Borboleta extends Bicho{
+class Borboleta extends Bicho {
+    Boolean ar;
 
+    Boolean getAr() {
+
+        return ar;
+    }
+    void setAr(Boolean ar){
+        this.ar = ar;
+    }
+    @Override
+    String getInfoFicha(){
+        return ('Nome: ' + this.nomeComum + '\n' + 'Descrição: '+ this.descricao + '\n' + 'Onde Vivem?: ' + this.habitat);
+    }
 }
+
 class Elefante extends Bicho{
+    Boolean terra;
+
+    Boolean getTerra() {
+
+        return terra;
+    }
+    void setTerra(Boolean terra){
+        this.terra = terra;
+    }
+    @Override
+    String getInfoFicha(){
+        return ('Classificação Cientifica: ' + this.nomeCientifico + '\n' + 'Onde Vivem?: ' + this.habitat +'\n'+ 'Descrição: '+ this.descricao);
+    }
+}
+class Golfinho extends Bicho {
+    Boolean agua;
+
+    Boolean getAgua() {
+
+        return agua;
+    }
+    void  setAgua(){
+        this.agua = agua;
+    }
+    @Override
+    String getInfoFicha(){
+        return  ('Nome: ' + this.nomeComum + '\n' + 'Onde Vivem? ' + this.habitat + '\n' + 'Descrição: ' + this.descricao);
+    }
 
 }
-class golfinho extends Bicho{
+Borboleta borboleta = new Borboleta();
+borboleta.setNomeComum("BORBOLETAS MONARCAS");
+borboleta.setHabitat('Vivem Perambulando');
+borboleta.setDescricao('Os adultos atingem uma envergadura de 40–100 mm, \n com as asas dianteiras largas, em geral apenas 1,4 a 1,9 vezes mais longas que largas. \n A cor de fundo das asas é em geral castanho-escuro, \n mas são comuns diversos tons de laranja, castanho, amarelo, vermelho, azul, roxo ou preto.')
 
-}
+FichaDosBichos fichaUm = new FichaDosBichos();
+fichaUm.infoBicho(borboleta);
+fichaUm.mostraInformacao(fichaUm.informacao);
+
+Elefante elefante = new Elefante();
+elefante.setNomeCientifico("Elephantidae");
+elefante.setHabitat('Na Mata');
+elefante.setDescricao('Os elefantes são animais herbívoros, alimentando-se de ervas, gramíneas, frutas e folhas de árvores. \n Dado o seu tamanho, um elefante adulto pode ingerir entre 70 a 150 kg de alimentos por dia. \n As fêmeas vivem em manadas de 10 a 15 animais, lideradas por uma matriarca, compostas por várias reprodutoras e crias de variadas idades. \n Devido ao seu porte, os elefantes têm poucos predadores. Eles vivem cerca de 60 anos e morrem quando seus molares caem, impedindo que se alimentem de plantas. ');
+
+FichaDosBichos fichaDois = new FichaDosBichos();
+fichaDois.infoBicho(elefante);
+fichaDois.mostraInformacao(fichaDois.informacao);
+
+Golfinho golfinho = new Golfinho();
+golfinho.setNomeComum('Boto-cor-de-rosa ');
+golfinho.setHabitat('Rio Amazonas');
+golfinho.setDescricao('É o maior golfinho de água doce, \nas espécies se distribuem nas bacias dos rios Amazonas e Solimões. \nOs adultos apresentam uma coloração rosada. \nTem a dieta mais ampla, alimentando-se principalmente de peixes, mas completando com tartarugas e caranguejos. ');
+
+FichaDosBichos fichaTres = new FichaDosBichos();
+fichaTres.infoBicho(golfinho);
+fichaTres.mostraInformacao(fichaTres.informacao);
