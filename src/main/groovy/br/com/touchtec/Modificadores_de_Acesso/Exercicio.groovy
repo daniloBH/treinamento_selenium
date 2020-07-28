@@ -41,6 +41,9 @@ class PastaDeArquivos {
 
 <<<<<<< ours
 <<<<<<< ours
+<<<<<<< ours
+=======
+>>>>>>> theirs
    void setAlteraIdDiretorio(long id){
        this.alterarIdDiretorio(id)
 
@@ -52,6 +55,9 @@ class PastaDeArquivos {
     }
 =======
 >>>>>>> theirs
+<<<<<<< ours
+=======
+>>>>>>> theirs
 =======
 >>>>>>> theirs
 
@@ -60,6 +66,9 @@ class PastaDeArquivos {
 List<String> conteudoDocs = ["Relatórios Gerência", "Documentação Issues Novas", "Folha de Pagamento"]
 <<<<<<< ours
 <<<<<<< ours
+<<<<<<< ours
+=======
+>>>>>>> theirs
 List<String> arquivos = ["Relatórios Gerência - 2019", "Documentação Issues 2019", "Folha de Pagamento - 2019"]
 
 PastaDeArquivos docsTouch = new PastaDeArquivos(532, "docsTouch", conteudoDocs, [2])
@@ -88,8 +97,14 @@ PastaDeArquivos docsTouch = new PastaDeArquivos(532, "docsTouch", conteudoDocs)
 docsTouch.mostrarInfosPasta()
 <<<<<<< ours
 <<<<<<< ours
+<<<<<<< ours
 
 =======
 >>>>>>> theirs
 =======
+>>>>>>> theirs
+=======
+
+=======
+>>>>>>> theirs
 >>>>>>> theirs
