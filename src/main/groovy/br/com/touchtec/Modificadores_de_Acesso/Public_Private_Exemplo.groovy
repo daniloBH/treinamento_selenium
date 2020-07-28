@@ -1,4 +1,4 @@
-package br.com.touchtec
+package br.com.touchtec.Modificadores_de_Acesso
 
 class Bicho {
 
