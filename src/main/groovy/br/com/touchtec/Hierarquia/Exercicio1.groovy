@@ -69,3 +69,101 @@ class FichaDosBichos {
         return answer
     }
 }
+class Hipopotamo extends Bicho {
+    String fofo
+    String fefeGosta
+
+    String getFofo() {
+        return fofo
+    }
+
+    void setFofo(String fofo) {
+        this.fofo = fofo
+    }
+
+    String getFefeGosta() {
+        return fefeGosta
+    }
+
+    void setFefeGosta(String fefeGosta) {
+        this.fefeGosta = fefeGosta
+    }
+
+    @Override
+    String getInfoFicha() {
+        return 'Nome Comum: '+ nomeComum + ' Nível de Fofura: ' + fofo + ' Onde vive: ' + habitat + ' O Fefe gosta? ' + fefeGosta
+    }
+}
+
+class Jacare extends Bicho {
+    String igualALagartixa
+    String fefePrefereAligator
+
+    String getIgualALagartixa () {
+        return igualALagartixa
+    }
+    void setIgualALargatixa (String igualALagartixa) {
+        this.igualALagartixa = igualALagartixa
+    }
+    String getfefePrefereAligator () {
+        return fefePrefereAligator
+    }
+    void setFefeprefereAligator (String fefePrefereAligator) {
+        this. fefePrefereAligator = fefePrefereAligator
+    }
+
+    @Override
+    String getInfoFicha () {
+        return 'Nome Comum: ' + nomeComum + ' É igual a Lagartixa? ' + igualALagartixa + ' Onde vive: ' + habitat + ' O Fefe gosta? ' +fefePrefereAligator
+    }
+}
+
+class Aguia extends Bicho {
+    String velocidadeMaxima
+    String eFiel
+
+    String getVelocidadeMaxima () {
+        return velocidadeMaxima
+    }
+    void setVelocidadeMaxima (String velocidadeMaxima) {
+        this.velocidadeMaxima = velocidadeMaxima
+    }
+    String getEfiel () {
+        return eFiel
+    }
+    void setVelocidademaxima (String eFiel) {
+        this.eFiel = eFiel
+    }
+    @Override
+    String getInfoFicha () {
+        return 'Nome Comum: ' + nomeComum + ' Qual a velocidade máxima? ' + velocidadeMaxima + ' Tem uma vida amorosa ativa? ' + eFiel + ' Onde viva: ' + habitat
+    }
+}
+
+Hipopotamo hipopotamozinho = new Hipopotamo()
+hipopotamozinho.setNomeComum('Hipopotamo;')
+hipopotamozinho.setFofo('muito fofo;')
+hipopotamozinho.setHabitat('perto de rios;')
+hipopotamozinho.setFefeGosta('Sim, gosta muito')
+hipopotamozinho.getInfoFicha()
+
+Jacare jacarezinho = new Jacare()
+jacarezinho.setNomeComum('Jacaré;')
+jacarezinho.setIgualALagartixa('sim, é uma lagartixa pequena;')
+jacarezinho.setHabitat('a beira da água;')
+jacarezinho.setFefePrefereAligator('o fefe gosta mais de aligators')
+jacarezinho.getInfoFicha()
+
+Aguia littleAguia = new Aguia()
+littleAguia.setNomeComum('Aguia;')
+littleAguia.setVelocidadeMaxima('160 km/h;')
+littleAguia.seteFiel('é fiel aos seus parceiros;')
+littleAguia.setHabitat('cerrado')
+littleAguia.getInfoFicha()
+
+FichaDosBichos fichahipo = new FichaDosBichos()
+fichahipo.mostraInformacao(hipopotamozinho.getInfoFicha())
+FichaDosBichos fichajac = new FichaDosBichos()
+fichajac.mostraInformacao(jacarezinho.getInfoFicha())
+FichaDosBichos fichaaguia = new FichaDosBichos()
+fichaaguia.mostraInformacao(littleAguia.getInfoFicha())

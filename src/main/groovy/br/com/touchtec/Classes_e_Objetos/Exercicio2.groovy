@@ -141,3 +141,17 @@ for (Monstrinho oMonstrinhoDaVez : monstrinhos){
 println(monstroGordo.mesmaCor(monstroMagro))
 println(monstroGordo.mesmaCor(monstroPequeno))
 
+Monstrinho torneio (Monstrinho monstroGordo, Monstrinho monstroMagro){
+    if (monstroGordo.luta(monstroMagro)){
+        return monstroGordo.getNome()
+    }
+}
+Monstrinho torneio2 (Monstrinho monstroPequeno, mosntroCarrancudo){
+    if (monstroPequeno.luta(monstroCarrancudo))
+        return monstroPequeno.getNome()
+}
+
+Monstrinho torneioFinal (Monstrinho monstroMagro, monstroPequeno){
+    if (monstroMagro.luta(monstroPequeno))
+        return monstroMagro.getNome()
+}
