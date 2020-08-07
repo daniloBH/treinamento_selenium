@@ -35,13 +35,25 @@ class PastaDeArquivos {
     }
 
 
+   void setAlteraIdDiretorio(long id){
+       this.alterarIdDiretorio(id)
+
+   }
+
+    void setAlterarConteudoDoArquivo(List conteudo){
+        this.alterarConteudoDoArquivo(conteudo)
+
+    }
 
 }
 
 List<String> conteudoDocs = ["Relatórios Gerência", "Documentação Issues Novas", "Folha de Pagamento"]
+List<String> arquivos = ["Relatórios Gerência - 2019", "Documentação Issues 2019", "Folha de Pagamento - 2019"]
 
 PastaDeArquivos docsTouch = new PastaDeArquivos(532, "docsTouch", conteudoDocs, [2])
-
+docsTouch.setAlteraIdDiretorio(588)
+docsTouch.alterarNomePasta('docsTouch2019')
+docsTouch.setAlterarConteudoDoArquivo(arquivos)
 /**
  * Esses debvem ser os valores do docsTouch a serem mostrados
  * Id: 588
@@ -50,3 +62,4 @@ PastaDeArquivos docsTouch = new PastaDeArquivos(532, "docsTouch", conteudoDocs, 
  */
 
 docsTouch.mostrarInfosPasta()
+
