@@ -127,8 +127,8 @@ fichaUm.infoBicho(borboleta);
 fichaUm.mostraInformacao(fichaUm.informacao);
 
 Elefante elefante = new Elefante();
-elefante.setNomeCientifico("Elephantidae");
-elefante.setHabitat('Na Mata');
+elefante.setNomeCientifico("ELEPHANTIDAE");
+elefante.setHabitat('Na Savana');
 elefante.setDescricao('Os elefantes são animais herbívoros, alimentando-se de ervas, gramíneas, frutas e folhas de árvores. \n Dado o seu tamanho, um elefante adulto pode ingerir entre 70 a 150 kg de alimentos por dia. \n As fêmeas vivem em manadas de 10 a 15 animais, lideradas por uma matriarca, compostas por várias reprodutoras e crias de variadas idades. \n Devido ao seu porte, os elefantes têm poucos predadores. Eles vivem cerca de 60 anos e morrem quando seus molares caem, impedindo que se alimentem de plantas. ');
 
 FichaDosBichos fichaDois = new FichaDosBichos();
@@ -136,7 +136,7 @@ fichaDois.infoBicho(elefante);
 fichaDois.mostraInformacao(fichaDois.informacao);
 
 Golfinho golfinho = new Golfinho();
-golfinho.setNomeComum('Boto-cor-de-rosa ');
+golfinho.setNomeComum('BOTO-COR-DE-ROSA');
 golfinho.setHabitat('Rio Amazonas');
 golfinho.setDescricao('É o maior golfinho de água doce, \nas espécies se distribuem nas bacias dos rios Amazonas e Solimões. \nOs adultos apresentam uma coloração rosada. \nTem a dieta mais ampla, alimentando-se principalmente de peixes, mas completando com tartarugas e caranguejos. ');
 
