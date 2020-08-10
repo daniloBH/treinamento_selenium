@@ -10,7 +10,7 @@ class PastaDeArquivos {
     private String nomePasta
     private List<String> conteudoArquivos
 
-    PastaDeArquivos(Long idDiretorio, String nomePasta, List<String> conteudoArquivos, List<Integer> arquivosPrivados) {
+    PastaDeArquivos(Long idDiretorio, String nomePasta, List<String> conteudoArquivos) {
         this.idDiretorio = idDiretorio
         this.nomePasta = nomePasta
         this.conteudoArquivos = conteudoArquivos
@@ -40,10 +40,10 @@ class PastaDeArquivos {
 
 List<String> conteudoDocs = ["Relatórios Gerência", "Documentação Issues Novas", "Folha de Pagamento"]
 
-PastaDeArquivos docsTouch = new PastaDeArquivos(532, "docsTouch", conteudoDocs, [2])
+PastaDeArquivos docsTouch = new PastaDeArquivos(532, "docsTouch", conteudoDocs)
 
 /**
- * Esses debvem ser os valores do docsTouch a serem mostrados
+ * Esses devem ser os valores do docsTouch a serem mostrados
  * Id: 588
  * Nome da Pasta: docsTouch2019
  * Conteudo Arquivos: ["Relatórios Gerência - 2019", "Documentação Issues 2019", "Folha de Pagamento - 2019"]
