@@ -51,9 +51,10 @@ class PastaDeArquivos {
 
 }
 List<String> conteudoDocs = ["Relatórios Gerência", "Documentação Issues Novas", "Folha de Pagamento"]
-List<String> conteudo = ["Relatórios Gerência - 2019", "Documentação Issues 2019", "Folha de Pagamento - 2019"]
+List<String> conteudo = ["Relatórios Gerência - 2019", "AMO FLOCO DE NEVE", "Folha de Pagamento - 2019"]
+conteudoDocs = conteudo;
 
-PastaDeArquivos docsTouch = new PastaDeArquivos(532, "docsTouch", conteudo);
+PastaDeArquivos docsTouch = new PastaDeArquivos(532, "docsTouch", conteudoDocs);
 docsTouch.setIdDiretorio(588);
 docsTouch.setNomePasta("docsTouch2019");
 //conteudoDocs+=["Relatórios Gerência - 2019"]
