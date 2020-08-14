@@ -27,6 +27,9 @@ class Forma {
      * Isso é o Polimorfismo de Sobrecarga, você cria várias versões do mesmo método em uma classe que funcionam de forma
      * diferente. Cada declaração deve ter algo que diferencie ela das outras, ou seja, ela aceita um tipo ou número diferente
      * de parâmetros
+     *
+     * Obs.: a diferenciação sempre é pelo número ou tipo de parâmetros que o método precisa! O tipo que o método retorna
+     * não serve para diferenciar!!
      */
     Integer soma(Integer numero) {
         return largura + numero

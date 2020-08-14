@@ -10,9 +10,8 @@ package br.com.touchtec.Polimorfismo
  *      "Item embalado com a embalagem: (Imprimir o tipoEmbalagem aqui)"
  *      Depois chame o fazerTarefa(String instrucao) da classe pai Funcionario
  *
- * O método fazerTarefa() da classe Montador pode ser usado como exemplo para fazer os métodos desse exercício
  *
- * No final utilize os métodos criados para realizar as tarefas descritas no final desse arquivo!
+ * No final utilize os métodos criados para realizar as tarefas comentadas no final
  */
 class Funcionario {
     Boolean realizouTarefa
@@ -37,12 +36,6 @@ class Funcionario {
 }
 
 class Montador extends Funcionario {
-
-    @Override
-    String fazerTarefa() {
-        println("Montagem realizada!")
-        return super.fazerTarefa()
-    }
 
 }
 
