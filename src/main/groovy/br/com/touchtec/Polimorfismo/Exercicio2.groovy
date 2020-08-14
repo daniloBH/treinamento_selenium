@@ -10,7 +10,6 @@ package br.com.touchtec.Polimorfismo
  *      "Item embalado com a embalagem: (Imprimir o tipoEmbalagem aqui)"
  *      Depois chame o fazerTarefa(String instrucao) da classe pai Funcionario
  *
- *
  * No final utilize os métodos criados para realizar as tarefas comentadas no final
  */
 class Funcionario {
@@ -51,4 +50,3 @@ Empacotador empacotador = new Empacotador()
 // Retirar os // quando for testar o q vc fez!
 //montador.fazerTarefa("Juntou a coisa com o treco")
 //empacotador.fazerTarefa("Empactar tudo junto", "Caixa de Papelão")
-
