@@ -20,20 +20,20 @@ class Ingresso {
         println(this.valor)
     }
 }
-//Colocar espaço entre cada declaração!! E tambem entre as classes
-//Isso vai deixar mais legível
-//Outra coisa, pode tirar os construtores vazios
+
 class Vip extends Ingresso {
     Integer valorAdicional
 
     float valor() {
         return valor + this.valorAdicional
     }
+
    @Override
     void imprimeValor(){
         println(this.valor())
     }
 }
+
 class CamaroteInferior extends Vip {
     String localizacao
 
@@ -41,6 +41,7 @@ class CamaroteInferior extends Vip {
         println(this.localizacao)
     }
 }
+
 class CamaroteSuperior extends Vip {
     Integer valorCamarote
     CamaroteSuperior(){}
@@ -48,6 +49,7 @@ class CamaroteSuperior extends Vip {
     float valor(){
         return super.valor() + valorCamarote
     }
+
     @Override
     void imprimeValor(){
         println(this.valor())

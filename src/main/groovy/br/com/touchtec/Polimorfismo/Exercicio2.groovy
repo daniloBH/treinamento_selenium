@@ -12,6 +12,7 @@ package br.com.touchtec.Polimorfismo
  *
  * No final utilize os métodos criados para realizar as tarefas comentadas no final
  */
+
 class Funcionario {
     Boolean realizouTarefa
 
@@ -43,16 +44,14 @@ class Montador extends Funcionario {
 
 }
 
-
 class Empacotador extends Funcionario {
 
-    //A string impressa tá diferente do enunciado!
     String fazerTarefa(String instrucao, String tipoEmbalagem ) {
         println("Item embalado com a embalagem: " + tipoEmbalagem)
         return super.fazerTarefa(instrucao)
     }
 }
-//Vc fez suas próprias tarefas, não precisava, pq lá no fim tinha duas já declaradas kkkk
+
 Montador montador = new Montador()
 montador.fazerTarefa( " Fez tudo que tinha que fazer com a ferramenta " )
 Empacotador empacotador = new Empacotador()
