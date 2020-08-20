@@ -14,7 +14,36 @@ package br.com.touchtec.Polimorfismo
 class Ingresso {
     Integer valor
 
+     Ingresso(){}
+
     void imprimeValor() {
         println(this.valor)
+    }
+}
+class Vip extends Ingresso {
+    Integer valorAdicional
+    Vip(){}
+     float valor() {
+        return valor + this.valorAdicional
+    }
+    void imprimeValor(){
+        println(this.valor())
+    }
+}
+class CamaroteInferior extends Vip {
+     String localizacao
+    CamaroteInferior(){}
+    void imprimeLoca(){
+        println(this.localizacao)
+    }
+}
+class CamaroteSuperior extends Vip {
+    Integer valorCamarote
+    CamaroteSuperior(){}
+    float valor(){
+        return super.valor() * valorCamarote
+    }
+    void imprimeValor(){
+        println(this.valor())
     }
 }

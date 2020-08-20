@@ -36,14 +36,25 @@ class Funcionario {
 
 class Montador extends Funcionario {
 
+    String fazerTarefa(String instrucao) {
+        println("Realizou a tarefa seguindo a instrucao:" + instrucao)
+        return super.fazerTarefa()
+    }
+
 }
 
-class Empacotador extends Funcionario {
 
+class Empacotador extends Funcionario {
+    String fazerTarefa(String instrucao, String tipoEmbalagem ) {
+        println( instrucao + "na" + tipoEmbalagem)
+        return super.fazerTarefa()
+    }
 }
 
 Montador montador = new Montador()
+montador.fazerTarefa( " Fez tudo que tinha que fazer com a ferramenta " )
 Empacotador empacotador = new Empacotador()
+empacotador.fazerTarefa("separou os item ", " sacola biodegradavel")
 /**
  * Tarefas a serem realizadas pelo montador e empacotador
  */
