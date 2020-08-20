@@ -14,25 +14,32 @@ package br.com.touchtec.Polimorfismo
 class Ingresso {
     Integer valor
 
-     Ingresso(){}
+    Ingresso(){}
 
     void imprimeValor() {
         println(this.valor)
     }
 }
+//Colocar espaço entre cada declaração!! E tambem entre as classes
+//Isso vai deixar mais legível
+//Outra coisa, pode tirar os construtores vazios
 class Vip extends Ingresso {
     Integer valorAdicional
     Vip(){}
+    //De olho na identação! O float tá com um espaço extra antes de começar
      float valor() {
         return valor + this.valorAdicional
     }
+    //Faltou um @Override aqui!
     void imprimeValor(){
         println(this.valor())
     }
 }
 class CamaroteInferior extends Vip {
+    //Espaço em branco extra antes do String!
      String localizacao
     CamaroteInferior(){}
+    //Faltou um "L" aqui no final!
     void imprimeLoca(){
         println(this.localizacao)
     }
@@ -40,9 +47,11 @@ class CamaroteInferior extends Vip {
 class CamaroteSuperior extends Vip {
     Integer valorCamarote
     CamaroteSuperior(){}
+    //Operação de calcular o valor tá errada
     float valor(){
         return super.valor() * valorCamarote
     }
+    //Faltou um @Override aqui!
     void imprimeValor(){
         println(this.valor())
     }

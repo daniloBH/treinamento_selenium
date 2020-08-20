@@ -45,12 +45,13 @@ class Montador extends Funcionario {
 
 
 class Empacotador extends Funcionario {
+    //A string impressa tá diferente do enunciado!
     String fazerTarefa(String instrucao, String tipoEmbalagem ) {
         println( instrucao + "na" + tipoEmbalagem)
         return super.fazerTarefa()
     }
 }
-
+//Vc fez suas próprias tarefas, não precisava, pq lá no fim tinha duas já declaradas kkkk
 Montador montador = new Montador()
 montador.fazerTarefa( " Fez tudo que tinha que fazer com a ferramenta " )
 Empacotador empacotador = new Empacotador()
