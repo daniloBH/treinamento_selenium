@@ -26,7 +26,15 @@ class Forma {
      *
      * Isso é o Polimorfismo de Sobrecarga, você cria várias versões do mesmo método em uma classe que funcionam de forma
      * diferente. Cada declaração deve ter algo que diferencie ela das outras, ou seja, ela aceita um tipo ou número diferente
-     * de parâmetros
+     * de parâmetros. Chamamos essas diferentes combinações de parâmetros de diferentes assinaturas do método.
+     * Porr exemplo as assinaturas do soma são:
+     * - soma(Integer numero)
+     * - soma(String texto)
+     * - soma(Integer numero1, Integer numero2)
+     * - soma(Integer numero, String texto)
+     * Voce pode mudar o tipo que o método retorna entre as diferentes funções, mas ele não muda a assinatura!!
+     * Ou seja, se tivessemos um String soma(Integer numero) ele daria problema por ter a mesma "assinatura" do
+     * Integer soma(Integer numero).
      */
     Integer soma(Integer numero) {
         return largura + numero
@@ -38,6 +46,10 @@ class Forma {
 
     Integer soma(Integer numero1, Integer numero2) {
         return numero1 + numero2
+    }
+
+    String soma(Integer numero, String texto) {
+        return numero + texto.toInteger()
     }
 
     Integer calculaArea() {
