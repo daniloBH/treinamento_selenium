@@ -1,5 +1,7 @@
 package br.com.touchtec.Polimorfismo
 
+import org.codehaus.groovy.runtime.dgmimpl.arrays.IntegerArrayGetAtMetaMethod
+
 /**
  * A partir da classe Ingresso implemente as seguintes classes com seus devidos métodos:
  *  1) Classe VIP que herda Ingresso e possui uma propriedade valorAdicional e um método que devolve
@@ -16,7 +18,55 @@ package br.com.touchtec.Polimorfismo
 class Ingresso {
     Integer valor
 
+    Ingresso(Integer valor){
+        this.valor = valor;
+    }
+
     void imprimeValor() {
         println(this.valor)
     }
+}
+class VIP extends Ingresso {
+    Integer valorAdicional
+
+    VIP(Integer valorAdicional) {
+        super(200)
+        this.valorAdicional = valorAdicional
+    }
+    Integer valorVip(){
+        return this.valorAdicional + valor
+    }
+}
+
+class Normal extends Ingresso {
+    Integer valorNormal
+
+    Normal(Integer valorNormal){
+        super(100);
+        this.valorNormal = valorNormal;
+    }
+
+    void imprimeValor(){
+        println(this.valorNormal)
+    }
+}
+class CamaroteInferior extends VIP {
+    String local
+    Integer camarote
+
+    CamaroteInferior(String local, Integer camarote){
+        super(80)
+        this.local = local;
+        this.camarote = camarote;
+    }
+    Integer valorCamarote(){
+        return this.camarote + valorAdicional
+    }
+    void imprimeLocal(){
+        println(this.local)
+    }
+
+}
+class CamaroteSuperior extends VIP{
+
 }
