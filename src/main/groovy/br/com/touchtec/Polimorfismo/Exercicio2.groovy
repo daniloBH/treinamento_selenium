@@ -45,10 +45,11 @@ class Montador extends Funcionario {
 
 
 class Empacotador extends Funcionario {
+
     //A string impressa tá diferente do enunciado!
     String fazerTarefa(String instrucao, String tipoEmbalagem ) {
-        println( instrucao + "na" + tipoEmbalagem)
-        return super.fazerTarefa()
+        println("Item embalado com a embalagem: " + tipoEmbalagem)
+        return super.fazerTarefa(instrucao)
     }
 }
 //Vc fez suas próprias tarefas, não precisava, pq lá no fim tinha duas já declaradas kkkk

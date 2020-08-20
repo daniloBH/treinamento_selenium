@@ -25,33 +25,30 @@ class Ingresso {
 //Outra coisa, pode tirar os construtores vazios
 class Vip extends Ingresso {
     Integer valorAdicional
-    Vip(){}
-    //De olho na identação! O float tá com um espaço extra antes de começar
-     float valor() {
+
+    float valor() {
         return valor + this.valorAdicional
     }
-    //Faltou um @Override aqui!
+   @Override
     void imprimeValor(){
         println(this.valor())
     }
 }
 class CamaroteInferior extends Vip {
-    //Espaço em branco extra antes do String!
-     String localizacao
-    CamaroteInferior(){}
-    //Faltou um "L" aqui no final!
-    void imprimeLoca(){
+    String localizacao
+
+    void imprimeLocal(){
         println(this.localizacao)
     }
 }
 class CamaroteSuperior extends Vip {
     Integer valorCamarote
     CamaroteSuperior(){}
-    //Operação de calcular o valor tá errada
+
     float valor(){
-        return super.valor() * valorCamarote
+        return super.valor() + valorCamarote
     }
-    //Faltou um @Override aqui!
+    @Override
     void imprimeValor(){
         println(this.valor())
     }
