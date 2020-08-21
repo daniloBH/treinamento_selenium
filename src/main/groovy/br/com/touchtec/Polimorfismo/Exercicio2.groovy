@@ -1,5 +1,8 @@
 package br.com.touchtec.Polimorfismo
 
+import br.com.touchtec.Classes_e_Objetos.Monstrinho
+import org.omg.CosNaming.IstringHelper
+
 /**
  * Implemente os seguintes métodos:
  *
@@ -36,10 +39,19 @@ class Funcionario {
 
 class Montador extends Funcionario {
 
+    String fazerTarefa(String instrucao){
+        println("Montagem realizada com a seguinte instrucao: " + instrucao)
+        return super.fazerTarefa();
+    }
+
 }
 
 class Empacotador extends Funcionario {
 
+    String fazerTarefa(String instrucao, String tipoEmbalagem){
+        println("Item embalado com a embalagem: " + tipoEmbalagem)
+        return super.fazerTarefa()
+    }
 }
 
 Montador montador = new Montador()
@@ -48,6 +60,6 @@ Empacotador empacotador = new Empacotador()
  * Tarefas a serem realizadas pelo montador e empacotador
  */
 // Retirar os // quando for testar o q vc fez!
-//montador.fazerTarefa("Juntou a coisa com o treco")
-//empacotador.fazerTarefa("Empactar tudo junto", "Caixa de Papelão")
+montador.fazerTarefa("Juntou a coisa com o treco")
+empacotador.fazerTarefa("Empactar tudo junto", "Caixa de Papelão")
 
