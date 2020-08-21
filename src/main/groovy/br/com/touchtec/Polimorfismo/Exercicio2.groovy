@@ -52,7 +52,7 @@ class Empacotador extends Funcionario {
     // fazerTarefa!
     String fazerTarefa(String instrucao, String tipoEmbalagem){
         println("Item embalado com a embalagem: " + tipoEmbalagem)
-        return super.fazerTarefa()
+        return super.fazerTarefa(instrucao)
     }
 }
 
