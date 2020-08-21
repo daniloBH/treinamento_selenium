@@ -48,6 +48,8 @@ class Montador extends Funcionario {
 
 class Empacotador extends Funcionario {
 
+    //O super.fazerTarefa() na vdd deve receber a instrução! Olha no Funcionario pra ver q tem duas assinaturas do
+    // fazerTarefa!
     String fazerTarefa(String instrucao, String tipoEmbalagem){
         println("Item embalado com a embalagem: " + tipoEmbalagem)
         return super.fazerTarefa()

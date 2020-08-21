@@ -34,6 +34,8 @@ class VIP extends Ingresso {
         this.valorAdicional = valorAdicional
     }
 
+    //Pode ser this.valorNormal! A propriedade do pai tmbm pertence ao filho
+    //Mas o super tmbm funciona! Descobriu coisas secretas hein kkkk
     Integer valorVip(){
         return (super.valorNormal + this.valorAdicional)
     }
@@ -51,12 +53,15 @@ class CamaroteInferior extends VIP {
         this.local = local;
     }
 
-//    String getLocal(){
-//        return this.local
-//    }
+    //Pode deixar o get aqui, não tem problema
+    String getLocal(){
+        return this.local
+    }
+
     void setLocal(String local){
         this.local = local;
     }
+
     void imprimeLocal(){
         println("A Localização é: " + this.local)
     }
@@ -65,6 +70,7 @@ class CamaroteInferior extends VIP {
 class CamaroteSuperior extends VIP{
     Integer valorCamaroteSuperior
 
+    //Boaaa!!! *palmas*
     CamaroteSuperior(Integer valorCamaroteSuperior, Integer valorAdicional, Integer valorNormal){
         super(valorAdicional,valorNormal);
         this.valorCamaroteSuperior = valorCamaroteSuperior
