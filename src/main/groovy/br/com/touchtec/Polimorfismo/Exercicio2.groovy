@@ -32,24 +32,25 @@ class Funcionario {
     }
 
     String fazerTarefa(String instrucao) {
-        println("Realizou a tarefa seguindo a instrucao:" + instrucao)
+        println("Realizou a tarefa seguindo a instrucao: " + instrucao)
         return this.fazerTarefa()
     }
 }
 
 class Montador extends Funcionario {
 
-    String fazerTarefa(String instrucao){
+    @Override
+    String fazerTarefa(String instrucao) {
         println("Montagem realizada com a seguinte instrucao: " + instrucao)
         return super.fazerTarefa();
     }
-
 }
 
 class Empacotador extends Funcionario {
 
     //O super.fazerTarefa() na vdd deve receber a instrução! Olha no Funcionario pra ver q tem duas assinaturas do
     // fazerTarefa!
+
     String fazerTarefa(String instrucao, String tipoEmbalagem){
         println("Item embalado com a embalagem: " + tipoEmbalagem)
         return super.fazerTarefa(instrucao)
@@ -63,5 +64,4 @@ Empacotador empacotador = new Empacotador()
  */
 // Retirar os // quando for testar o q vc fez!
 montador.fazerTarefa("Juntou a coisa com o treco")
-empacotador.fazerTarefa("Empactar tudo junto", "Caixa de Papelão")
-
+println(empacotador.fazerTarefa("Empactar tudo junto", "Caixa de Papelão"))
