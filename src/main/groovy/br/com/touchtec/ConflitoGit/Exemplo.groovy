@@ -15,6 +15,7 @@ import javax.swing.JOptionPane
  * Esse editor tem 3 'colunas' que são, da esquerda para a direita: a sua versão local, a versão final e a versão remota
  * A versão final é a mistura que você vai montar das mudanças locais e do remoto.
  */
+
 def mostra = { def texto ->
     JFrame frame = new JFrame()
     String answer = JOptionPane.showMessageDialog(frame, texto.toString())
@@ -29,15 +30,22 @@ Closure<Integer> pedeInteiro = {
     return Integer.parseInt(answer)
 }
 
+/**
+ * Tentando causar
+ */
 def mostraLista = { List<String> lista ->
     mostra(lista.join(", "));
 }
 
 String olaPessoa(String nome, Integer idade) {
+    abobrinha
     return("Olá " + nome + ", Idade:" + idade)
 }
 
-//olaPessoa("Paulo", 18)
+olaPessoa("Paulo", 18)
+abobrinha
+abobrinha
+abobrinha
 
 void oiMundo() {
     print("Olá Mundo!")
@@ -52,21 +60,32 @@ Integer determinaMaior(Integer a, Integer b) {
     else {
         return b
     }
+    /**
+     * Tentando causar
+     */
 }
 
-//List<String> lista = []
-//lista.add(pedeInteiro().toString())
-//lista.add(pedeInteiro().toString())
-//mostraLista(lista)
-
+List<String> lista = []
+lista.add(pedeInteiro().toString())
+abobrinha
+lista.add(pedeInteiro().toString())
+lista.add('abobrinha')
+mostraLista(lista)
+/**
+ * Tentando causar
+ */
 void mostraMaior(Integer a, Integer b) {
     if(a > b) {
         println(a)
     }
     else {
         println(b)
+        /**
+         * Tentando causar
+         */
     }
 }
+abobrinha
 
 mostraMaior(5, 6)
 
