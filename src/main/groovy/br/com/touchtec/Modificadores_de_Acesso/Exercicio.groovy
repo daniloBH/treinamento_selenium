@@ -29,6 +29,12 @@ class PastaDeArquivos {
     void setNomePasta(String nomePasta){
         this.nomePasta = nomePasta;
     }
+    List<String> getConteudoArquivos(){
+        return conteudoArquivos
+    }
+    void setConteudoArquivos(List<String> conteudoArquivos){
+        this.conteudoArquivos = conteudoArquivos
+    }
 
     private alterarIdDiretorio(Long novoId) {
         this.idDiretorio = novoId
@@ -51,13 +57,13 @@ class PastaDeArquivos {
 
 }
 List<String> conteudoDocs = ["Relatórios Gerência", "Documentação Issues Novas", "Folha de Pagamento"]
-List<String> conteudo = ["Relatórios Gerência - 2019", "Documentação Issues 2019", "Folha de Pagamento - 2019"]
-conteudoDocs = conteudo;
+List<String> novoConteudo = ["Relatórios Gerência - 2019", "Documentação Issues 2019", "Folha de Pagamento - 2019"]
 
 PastaDeArquivos docsTouch = new PastaDeArquivos(532, "docsTouch", conteudoDocs);
 docsTouch.setIdDiretorio(588);
 docsTouch.setNomePasta("docsTouch2019");
-//conteudoDocs+=["Relatórios Gerência - 2019"]
+docsTouch.setConteudoArquivos(novoConteudo);
+
 
 
 /**
@@ -68,3 +74,12 @@ docsTouch.setNomePasta("docsTouch2019");
  */
 
 docsTouch.mostrarInfosPasta();
+
+
+
+
+
+
+
+
+
