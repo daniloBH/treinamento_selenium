@@ -1,5 +1,6 @@
 package br.com.touchtec.Polimorfismo
 
+import com.sun.java.swing.plaf.windows.WindowsTextAreaUI
 import org.codehaus.groovy.runtime.dgmimpl.arrays.IntegerArrayGetAtMetaMethod
 
 /**
@@ -11,62 +12,84 @@ import org.codehaus.groovy.runtime.dgmimpl.arrays.IntegerArrayGetAtMetaMethod
  *  4) Classe CamaroteSuperior que herda da VIP, possui uma propriedade valorCamarote e um método para devolver o valor total
  *  do ingresso (valor do VIP + valor camarote). Esse valor total deverá ser impresso pelo método imprimeValor
  *
- *  Obs.: O método que calcula o valor do ingresso irá ser declarado na classe VIP e sobreposto caso necessário nas classes que
- * herdaram a VIP
  */
 
 class Ingresso {
-    Integer valor
+    public Integer valorNormal
 
-    Ingresso(Integer valor){
-        this.valor = valor;
-    }
-
-    void imprimeValor() {
-        println(this.valor)
-    }
-}
-class VIP extends Ingresso {
-    Integer valorAdicional
-
-    VIP(Integer valorAdicional) {
-        super(200)
-        this.valorAdicional = valorAdicional
-    }
-    Integer valorVip(){
-        return this.valorAdicional + valor
-    }
-}
-
-class Normal extends Ingresso {
-    Integer valorNormal
-
-    Normal(Integer valorNormal){
-        super(100);
+    Ingresso(Integer valorNormal){
         this.valorNormal = valorNormal;
     }
 
-    void imprimeValor(){
-        println(this.valorNormal)
+    void imprimeValorNormal() {
+        println("Valor do Ingresso Normal: " + this.valorNormal)
     }
 }
+
+class VIP extends Ingresso {
+    Integer valorAdicional
+
+    VIP(Integer valorAdicional, Integer valorNormal){
+        super(valorNormal);
+        this.valorAdicional = valorAdicional
+    }
+
+    Integer valorVip(){
+        return (super.valorNormal + this.valorAdicional)
+    }
+
+    void imprimeValorVip() {
+        println("Valor do Ingresso VIP: " + this.valorVip())
+    }
+}
+
 class CamaroteInferior extends VIP {
     String local
-    Integer camarote
 
-    CamaroteInferior(String local, Integer camarote){
-        super(80)
+    CamaroteInferior(String local){
+        super(20,30)
         this.local = local;
-        this.camarote = camarote;
     }
-    Integer valorCamarote(){
-        return this.camarote + valorAdicional
+
+//    String getLocal(){
+//        return this.local
+//    }
+    void setLocal(String local){
+        this.local = local;
     }
     void imprimeLocal(){
-        println(this.local)
+        println("A Localização é: " + this.local)
     }
 
 }
 class CamaroteSuperior extends VIP{
+    Integer valorCamaroteSuperior
+
+    CamaroteSuperior(Integer valorCamaroteSuperior, Integer valorAdicional, Integer valorNormal){
+        super(valorAdicional,valorNormal);
+        this.valorCamaroteSuperior = valorCamaroteSuperior
+    }
+
+    Integer valorCamarote(){
+        return  (this.valorAdicional + this.valorNormal + this.valorCamaroteSuperior);
+    }
+
+    void imprimeCamaroteSuperior() {
+        println("Valor do Ingresso Camarote Superior: " + this.valorCamarote());
+    }
 
 }
+
+Ingresso ingressoNormal = new Ingresso(100);
+println(ingressoNormal.imprimeValorNormal());
+
+VIP ingressoVip = new VIP(200,100);
+println(ingressoVip.imprimeValorVip());
+
+CamaroteInferior local = new CamaroteInferior("Av dos Ipês, 2135, Jd das Flores - SP")
+println(local.imprimeLocal())
+
+CamaroteSuperior ingressoCamarote = new CamaroteSuperior(150, 200, 100);
+println(ingressoCamarote.imprimeCamaroteSuperior())
+
+//String endereco = "Av dos Ipês - 2135, Jd Das Flores"
