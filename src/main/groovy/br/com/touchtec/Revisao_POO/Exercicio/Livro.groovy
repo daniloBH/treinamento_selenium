@@ -5,6 +5,7 @@ package br.com.touchtec.Revisao_POO.Exercicio
  * de informações de diversos Bichos.
  * montaLivro -> método que recebe informações de todos os Bichos descritos no livro e monta uma pagina pra cada,
  * decide se a página é Ilustrativa ou não pela propriedade paginaIlustrativa fornecida.
+ * Se for ilustrativa, ela tambem terá a infoImagem e a legendaImagem.
  */
 class Livro {
 
