@@ -13,7 +13,10 @@ class Pagina {
         this.titulo = titulo
     }
 
-    public Pagina montaPaginaComBicho(Bicho bicho) {
+    /**
+     * Os parâmetros desse método ficam a seu critério
+     */
+    public Pagina montaPaginaComBicho() {
 
     }
 }
