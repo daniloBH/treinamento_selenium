@@ -16,4 +16,3 @@ def infoBichos = [
         [nome: "Arara", cor: "azul e amarelo", peso: 1, tamanho: 65, paginaIlustrativa: true, infoImagem: "Um grupo de araras sobrevoando a Amazônia, muito bonito",
             legendaImagem: "As araras vivem com seus parceiros a vida toda"]
 ]
-

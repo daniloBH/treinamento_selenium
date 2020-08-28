@@ -10,9 +10,11 @@ package br.com.touchtec.Revisao_POO.Exercicio
 class Livro {
 
     List<Pagina> listaPaginas
+    List<PaginaIlustrativa> listaPaginaIlustrativa
 
-    Livro(List<Pagina> listaPaginas) {
+    Livro(List<Pagina> listaPaginas, List<PaginaIlustrativa> listaPaginaIlustrativa) {
         this.listaPaginas = listaPaginas
+        this.listaPaginaIlustrativa = listaPaginaIlustrativa
     }
 
     Livro montaLivro(List<Map> listaInfos) {
