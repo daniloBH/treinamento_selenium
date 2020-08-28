@@ -4,6 +4,9 @@ import br.com.touchtec.Revisao_POO.Bicho
 
 class PaginaIlustrativa extends Pagina{
 
+    /**
+     * A infoImagem
+     */
     InfoImagem infoImagem
     LegendaImagem legendaImagem
 
@@ -13,7 +16,10 @@ class PaginaIlustrativa extends Pagina{
         this.legendaImagem = legendaImagem
     }
 
-    PaginaIlustrativa montaPaginaIlustrativaComBicho(Bicho bicho) {
+    /**
+     * Os parâmetros desse método ficam a seu critério
+     */
+    PaginaIlustrativa montaPaginaIlustrativaComBicho() {
 
     }
 }

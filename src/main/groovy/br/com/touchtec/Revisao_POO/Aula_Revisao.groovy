@@ -1,7 +1,6 @@
 package br.com.touchtec.Revisao_POO
 
 /**
- * Falar sobre public, private e protected!
  * Com isso montar uma classe que tenha as propriedades como private
  *
  * Bônus:
@@ -15,15 +14,6 @@ package br.com.touchtec.Revisao_POO
 
 public class Bicho {
 
-    /**
-     * Tipos de permissão de acesso:
-     * Public: Qualquer um pode usar o que voce está declarando.
-     * Private: Apenas a própria classe pode usar o que você está declarando.
-     * Protected e o "padrão" (sem nada escrito): uma proteção um pouco mais frouxa que o private,
-     * mas não é aberto como o public.
-     *
-     * Caso queira saber os detalhes, vale a pesquisa no Google qual a diferença entre os 3 no Java ;)
-     */
     private String nome;
     private String cor;
     private Integer peso;
@@ -74,16 +64,18 @@ public class Bicho {
         this.tamanho = tamanho
     }
 
-    def getMudar() {
-        return mudar
-    }
-
-    private void setMudar(mudar) {
-        this.mudar = mudar
-    }
-
-    private mudarDadosBicho(String nome, String cor, Integer peso, Integer tamanho) {
+    /**
+     * Polimorfismo de sobrecarga!
+     * Várias 'versões' do mesmo método, mas com parâmetros diferentes
+     */
+    private void mudarDadosBicho(String nome, String cor, Integer peso, Integer tamanho) {
         this.nome = nome
+        this.cor = cor
+        this.peso = peso
+        this.tamanho = tamanho
+    }
+
+    private void mudarDadosBicho (String cor, Integer peso, Integer tamanho) {
         this.cor = cor
         this.peso = peso
         this.tamanho = tamanho
@@ -95,6 +87,13 @@ public class Bicho {
     }
 
 }
+
+/**
+ * Hieraraquia - Montar uma classe derivada de Bicho
+ * Polimorfismo - Na classe derivada deve ter métodos que sobrescrevem da classe Bicho (sobreposição)
+ *              - Também deve ter métodos com várias assinaturas (sobrecarga)
+ *
+ */
 
 public class LivroBichos {
 

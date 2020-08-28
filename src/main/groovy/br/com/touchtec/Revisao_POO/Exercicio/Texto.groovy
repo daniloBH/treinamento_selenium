@@ -7,6 +7,9 @@ class Texto {
         this.texto = texto
     }
 
+    /**
+     * Voce pode modificar o texto montado para deixar as paginas mais caprichadas!
+     */
     static void montaTexto(String nome, String cor, Integer tamanho, Integer peso) {
         new Texto(nome + cor + tamanho.toString() + peso.toString())
     }

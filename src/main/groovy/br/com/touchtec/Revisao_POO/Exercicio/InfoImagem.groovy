@@ -6,8 +6,4 @@ class InfoImagem {
     InfoImagem(String info) {
         this.info = info
     }
-
-    static void montaInfoImagem(String nome, Integer tamanho, String cor) {
-        new InfoImagem(nome + tamanho.toString() + cor)
-    }
 }
