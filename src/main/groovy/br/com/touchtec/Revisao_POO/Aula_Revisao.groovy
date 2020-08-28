@@ -10,6 +10,7 @@ package br.com.touchtec.Revisao_POO
  *  Ctrl + Clique: Vai para o lugar aonde aquilo foi declarado, ou se clicar na declaração, mostra a lista dos lugares que
  * usam o método ou propriedade
  *  Ctrl + Shift + F: busca com vários filtros diferentes
+ *  Renomear variavel/metodo/propriedade: clique direito em cima do que quer renomear -> Refactor -> Rename (ou Shift + F6)
  */
 
 public class Bicho {
@@ -27,7 +28,7 @@ public class Bicho {
     }
 
     String getNome() {
-        return nome
+        return this.nome
     }
 
     /**
@@ -41,7 +42,7 @@ public class Bicho {
     }
 
     String getCor() {
-        return cor
+        return this.cor
     }
 
     private void setCor(String cor) {
@@ -49,7 +50,7 @@ public class Bicho {
     }
 
     Integer getPeso() {
-        return peso
+        return this.peso
     }
 
     private void setPeso(Integer peso) {
@@ -57,7 +58,7 @@ public class Bicho {
     }
 
     Integer getTamanho() {
-        return tamanho
+        return this.tamanho
     }
 
     private void setTamanho(Integer tamanho) {
@@ -69,21 +70,26 @@ public class Bicho {
      * Várias 'versões' do mesmo método, mas com parâmetros diferentes
      */
     private void mudarDadosBicho(String nome, String cor, Integer peso, Integer tamanho) {
-        this.nome = nome
+        this.setNome(nome)
         this.cor = cor
         this.peso = peso
         this.tamanho = tamanho
     }
 
-    private void mudarDadosBicho (String cor, Integer peso, Integer tamanho) {
+    private void mudarDadosBicho(String cor, Integer peso, Integer tamanho) {
         this.cor = cor
         this.peso = peso
         this.tamanho = tamanho
     }
 
-    public mudarPesoETamanho(Integer peso, Integer tamanho) {
+    public void mudarPesoETamanho(Integer peso, Integer tamanho) {
         this.peso = peso
         this.tamanho = tamanho
+    }
+
+    public void mudaNomeECor(String nome, String cor) {
+        this.setNome(nome)
+        this.setCor(cor)
     }
 
 }
@@ -94,6 +100,62 @@ public class Bicho {
  *              - Também deve ter métodos com várias assinaturas (sobrecarga)
  *
  */
+
+public class BichoMarinho extends Bicho{
+    Boolean temCauda
+    String tipoCauda
+    Boolean respiraDebaixoDagua
+
+    BichoMarinho(String nome, String cor, Integer peso, Integer tamanho, Boolean temCauda, String tipoCauda, Boolean respiraDebaixoDagua) {
+        super(nome, cor, peso, tamanho)
+        this.temCauda = temCauda
+        this.tipoCauda = tipoCauda
+        this.respiraDebaixoDagua = respiraDebaixoDagua
+    }
+
+    BichoMarinho(String nome, String cor, Integer peso, Integer tamanho, Boolean temCauda) {
+        super(nome, cor, peso, tamanho)
+        this.temCauda = temCauda
+    }
+
+    Boolean getTemCauda() {
+        return temCauda
+    }
+
+    void setTemCauda(Boolean temCauda) {
+        this.temCauda = temCauda
+    }
+
+    String getTipoCauda() {
+        return tipoCauda
+    }
+
+    void setTipoCauda(String tipoCauda) {
+        this.tipoCauda = tipoCauda
+    }
+
+    Boolean getRespiraDebaixoDagua() {
+        return respiraDebaixoDagua
+    }
+
+    void setRespiraDebaixoDagua(Boolean respiraDebaixoDagua) {
+        this.respiraDebaixoDagua = respiraDebaixoDagua
+    }
+
+    @Override
+    void mudarPesoETamanho(Integer peso, Integer tamanho) {
+        super.mudarPesoETamanho(peso, tamanho)
+    }
+
+    void mudaInfosCauda(Boolean temCauda) {
+        this.temCauda = temCauda
+    }
+
+    void mudaInfosCauda(Boolean temCauda, String tipoCauda) {
+        this.temCauda = temCauda
+        this.tipoCauda = tipoCauda
+    }
+}
 
 public class LivroBichos {
 

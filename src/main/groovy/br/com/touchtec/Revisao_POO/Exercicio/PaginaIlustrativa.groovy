@@ -4,9 +4,6 @@ import br.com.touchtec.Revisao_POO.Bicho
 
 class PaginaIlustrativa extends Pagina{
 
-    /**
-     * A infoImagem
-     */
     InfoImagem infoImagem
     LegendaImagem legendaImagem
 
