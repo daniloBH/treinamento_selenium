@@ -22,7 +22,7 @@ class Forma {
      * No método soma() temos uma sobrecarga. Veja que o mesmo método é declarado duas vezes! Mas ele aceita um número diferente
      * de parâmetros em cada declaração!
      *
-     * Isso é o Polimorfismo de Sobrecarga, você cria várias versões do mesmo método em uma classe que funcionam de forma
+     * Isso é o Polimorfismo de "Sobrecarga", você cria várias versões do mesmo método em uma classe que funcionam de forma
      * diferente. Cada declaração deve ter algo que diferencie ela das outras, ou seja, ela aceita um tipo ou número diferente
      * de parâmetros. Chamamos essas diferentes combinações de parâmetros de diferentes assinaturas do método.
      * Por exemplo as assinaturas do soma são:
