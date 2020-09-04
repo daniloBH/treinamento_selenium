@@ -31,3 +31,15 @@ def mostra = { def texto ->
  * programa que leia o número de maçãs compradas, calcule e mostre o
  * valor total da compra.
  */
+
+
+Double preço
+Integer quantidade
+quantidade=pedeInteiro()
+
+if (quantidade<12){
+    mostra (quantidade*0.30)
+}
+else{ (quantidade>=12)
+    mostra (quantidade*0.25)
+}

@@ -32,3 +32,12 @@ def mostra = { def texto ->
  * ACESSO PERMITIDO caso a senha seja válida.  
  * ACESSO NEGADO caso a senha seja inválida. 
  */
+
+Integer senha = pedeInteiro ()
+
+if (senha == 1234){
+    mostra ('ACESSO PERMITIDO')
+    }
+    else {
+    mostra ('ACESSO NEGADO')
+}

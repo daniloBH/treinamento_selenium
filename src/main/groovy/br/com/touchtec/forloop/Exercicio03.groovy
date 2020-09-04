@@ -26,10 +26,21 @@ def mostra = { def texto ->
 }
 
 /**
- * Percorra todos os números de 0 a 10.
+ * Percorra todos os números de 0 a 10.0
  * Se o número for par, multiplique por 5 e mostre o número.
  * Se o número for impar, multiplique por 10 e mostre o número.
  *
  * Dica: Aprenda o operador '%' para descobrir se o número é par ou não. Temos o google para isso!
  */
 
+Integer n
+
+for(n = 0; n <= 10; n = n+1) {
+    if(n % 2 == 0) {
+        mostra(n * 5)
+    }
+    else {
+        mostra(n * 10)
+    }
+}
+  

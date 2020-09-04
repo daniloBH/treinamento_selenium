@@ -29,3 +29,15 @@ def mostra = { def texto ->
  * Peça dois números e mostre o maior deles.
  */
 
+Integer numero1
+Integer numero2
+numero1=pedeInteiro()
+numero2=pedeInteiro()
+
+if (numero1>numero2){
+    mostra (numero1)
+}
+else{
+    (numero2>numero1)
+    mostra (numero2)
+}

@@ -29,3 +29,9 @@ def mostra = { def texto ->
  * Mostre todos os números pares entre 0 e 10 mas não mostre o número 6
  */
 
+Integer n
+for (n = 0;n <= 10; n = n + 2 ) {
+    if (n==6)
+        continue
+        mostra n
+}

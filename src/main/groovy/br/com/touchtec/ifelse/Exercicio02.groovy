@@ -29,3 +29,13 @@ def mostra = { def texto ->
  * Peca o ano que a pessoa nasceu (Ex: 1982). Mostre uma mensagem indicando se a
  * pessoa pode votar este ano ou não.
  */
+
+Integer AnoNascimento
+AnoNascimento=pedeInteiro()
+
+if (AnoNascimento > 2004){
+    mostra ('Vocẽ ainda não pode votar')
+}
+else {(AnoNascimento<=2004)
+    mostra ('Você está apto a votar')
+}

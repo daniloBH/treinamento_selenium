@@ -126,11 +126,11 @@ Monstrinho monstroMagro = new Monstrinho("Vareta", "Laranja", 60, 80, 20);
 Monstrinho monstroPequeno = new Monstrinho("Bola", "Azul", 30, 15, 30);
 Monstrinho monstroCarrancudo = new Monstrinho("Carranca", "Verde", 150, 70, 15);
 
-List <Monstrinho> monstrinhos = [monstroGordo, monstroMagro, monstroPequeno, monstroCarrancudo]
+List <Monstrinho> listamonstrinhos = [monstroGordo, monstroMagro, monstroPequeno, monstroCarrancudo]
 
-Monstrinho oMonstrinhoMaisAltoAteAgora = monstrinhos[0]
-Monstrinho oMonstrinhoMaisPesado = monstrinhos[0]
-for (Monstrinho oMonstrinhoDaVez : monstrinhos){
+Monstrinho oMonstrinhoMaisAltoAteAgora = listamonstrinhos[0]
+Monstrinho oMonstrinhoMaisPesado = listamonstrinhos[0]
+for (Monstrinho oMonstrinhoDaVez : listamonstrinhos){
     if (oMonstrinhoDaVez.maisAltoQue(oMonstrinhoMaisAltoAteAgora)){
         oMonstrinhoMaisAltoAteAgora = oMonstrinhoDaVez
     }
@@ -141,17 +141,19 @@ for (Monstrinho oMonstrinhoDaVez : monstrinhos){
 println(monstroGordo.mesmaCor(monstroMagro))
 println(monstroGordo.mesmaCor(monstroPequeno))
 
-Monstrinho torneio (Monstrinho monstroGordo, Monstrinho monstroMagro){
-    if (monstroGordo.luta(monstroMagro)){
-        return monstroGordo.getNome()
-    }
+Monstrinho oMonstrinhoVencedor1
+if (monstroGordo.luta(monstroMagro)){
+    oMonstrinhoVencedor1 = monstroGordo
 }
-Monstrinho torneio2 (Monstrinho monstroPequeno, mosntroCarrancudo){
-    if (monstroPequeno.luta(monstroCarrancudo))
-        return monstroPequeno.getNome()
-}
+else {oMonstrinhoVencedor1 = monstroMagro}
 
-Monstrinho torneioFinal (Monstrinho monstroMagro, monstroPequeno){
-    if (monstroMagro.luta(monstroPequeno))
-        return monstroMagro.getNome()
+Monstrinho oMonstrinhoVencedor2
+if (monstroPequeno.luta(monstroCarrancudo)){
+    oMonstrinhoVencedor2 = monstroPequeno
 }
+else {oMonstrinhoVencedor2 = monstroCarrancudo}
+
+if (oMonstrinhoVencedor1.luta(oMonstrinhoVencedor2)){
+    println(oMonstrinhoVencedor1.nome)
+}
+else {println(oMonstrinhoVencedor2.nome)}
