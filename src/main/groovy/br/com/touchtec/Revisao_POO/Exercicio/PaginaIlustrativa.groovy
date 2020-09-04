@@ -13,7 +13,10 @@ class PaginaIlustrativa extends Pagina{
         this.legendaImagem = legendaImagem
     }
 
-    PaginaIlustrativa montaPaginaIlustrativaComBicho(Bicho bicho) {
+    /**
+     * Os parâmetros desse método ficam a seu critério
+     */
+    PaginaIlustrativa montaPaginaIlustrativaComBicho() {
 
     }
 }
