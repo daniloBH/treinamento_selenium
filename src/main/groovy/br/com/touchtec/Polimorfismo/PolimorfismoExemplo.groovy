@@ -21,7 +21,7 @@ class Forma {
     Forma() {}
 
     /**
-     * No método soma() temos uma sobrecarga. Veja que o mesmo método é declarado duas vezes! Mas ele aceita um número diferente
+     * No método soma() temos uma sobrecarga. Veja que o mesmo método é declarado quatro vezes! Mas ele aceita um número diferente
      * de parâmetros em cada declaração!
      *
      * Isso é o Polimorfismo de Sobrecarga, você cria várias versões do mesmo método em uma classe que funcionam de forma
@@ -48,8 +48,12 @@ class Forma {
         return numero1 + numero2
     }
 
+    String soma(String numero1, Integer numero2) {
+        return numero1 + numero2
+    }
+
     String soma(Integer numero, String texto) {
-        return numero + texto.toInteger()
+        return (numero + texto.toInteger()).toString()
     }
 
     Integer calculaArea() {
@@ -68,7 +72,6 @@ println(forma.soma(2, 2) == 4)
  * usará a implementação do método da Triangulo.
  * Obs.: Um triangulo não consegue calcular a area usando a formula da Forma!!
  */
-
 class Triangulo extends Forma{
 
     @Override
