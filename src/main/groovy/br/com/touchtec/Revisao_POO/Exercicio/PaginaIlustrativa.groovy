@@ -16,7 +16,15 @@ class PaginaIlustrativa extends Pagina{
     /**
      * Os parâmetros desse método ficam a seu critério
      */
-    PaginaIlustrativa montaPaginaIlustrativaComBicho() {
+    PaginaIlustrativa montaPaginaIlustrativaComBicho(){
 
+
+    }
+
+    Boolean getInfoImagem(){
+        return infoImagem
+    }
+    void setInfoImagem(Boolean infoImagem){
+        this.infoImagem= infoImagem
     }
 }

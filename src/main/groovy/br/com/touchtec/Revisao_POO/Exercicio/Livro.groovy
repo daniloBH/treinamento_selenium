@@ -7,17 +7,33 @@ package br.com.touchtec.Revisao_POO.Exercicio
  * decide se a página é Ilustrativa ou não pela propriedade paginaIlustrativa fornecida.
  * Se for ilustrativa, ela tambem terá a infoImagem e a legendaImagem.
  */
+
 class Livro {
 
     List<Pagina> listaPaginas
     List<PaginaIlustrativa> listaPaginaIlustrativa
 
-    Livro(List<Pagina> listaPaginas, List<PaginaIlustrativa> listaPaginaIlustrativa) {
+    Livro(){
+        super()
+    }
+
+    Livro(List<Pagina> listaPaginas, List<PaginaIlustrativa> listaPaginaIlustrativa){
         this.listaPaginas = listaPaginas
         this.listaPaginaIlustrativa = listaPaginaIlustrativa
     }
 
-    Livro montaLivro(List<Map> listaInfos) {
+    // Este método que recebe a Lista de Bichos, para a montegem do livro..
+    // A Lista está no arquivo Exercicio1
+
+    Livro montaLivro(List<Bichos> listaDosBichos){
+        for(Bichos bicho : listaDosBichos){
+
+
+        }
+
 
     }
+
+
+
 }

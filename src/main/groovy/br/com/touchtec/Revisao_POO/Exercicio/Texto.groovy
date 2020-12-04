@@ -10,7 +10,10 @@ class Texto {
     /**
      * Voce pode modificar o texto montado para deixar as paginas mais caprichadas!
      */
-    static void montaTexto(String nome, String cor, Integer tamanho, Integer peso) {
-        new Texto(nome + cor + tamanho.toString() + peso.toString())
+    // toString tranforma Tipo da declaração em outra, por exemplo Integer em String
+
+    static Texto montaTexto(String nome, String cor, Integer tamanho, Integer peso){
+        return new Texto("Nome do Animal: " + nome + "\n" + "Cor: "+ cor +
+                "\n" + "Tamanho: " + tamanho.toString() + "\n" + "Peso: " + peso.toString())
     }
 }
